@@ -1,0 +1,471 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Migration to version 1 · Apify SDK</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="- [Summary](#summary)"/><meta name="docsearch:version" content="1.2.0"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Migration to version 1 · Apify SDK"/><meta property="og:type" content="website"/><meta property="og:url" content="https://sdk.apify.com/"/><meta property="og:description" content="- [Summary](#summary)"/><meta property="og:image" content="https://sdk.apify.com/img/apify_og_SDK.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://sdk.apify.com/img/apify_og_SDK.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/apify_logo.svg" alt="Apify SDK"/><h2 class="headerTitleWithLogo">Apify SDK</h2></a><a href="/versions"><h3>1.2.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class="siteNavGroupActive"><a href="/docs/1.2.0/guides/motivation" target="_self">Guide</a></li><li class="siteNavGroupActive"><a href="/docs/1.2.0/examples/crawl-multiple-urls" target="_self">Examples</a></li><li class="siteNavGroupActive"><a href="/docs/1.2.0/api/apify" target="_self">API Reference</a></li><li class=""><a href="https://github.com/apify/apify-js" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guide</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Guide<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/1.2.0/guides/motivation">Motivation</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/guides/quick-start">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/guides/apify-platform">Apify Platform</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/guides/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/guides/request-storage">Request Storage</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/guides/result-storage">Result Storage</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/guides/environment-variables">Environment Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/guides/proxy-management">Proxy Management</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/guides/session-management">Session Management</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/guides/type-script-actor">TypeScript Actors</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/guides/docker-images">Running in Docker</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/1.2.0/guides/migration-to-v1">Migration to version 1</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Examples<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/accept-user-input">Accept user input</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/add-data-to-dataset">Add data to dataset</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/basic-crawler">Basic crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/call-actor">Call actor</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/capture-screenshot">Capture a screenshot</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/cheerio-crawler">Cheerio crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/crawl-all-links">Crawl all links on a website</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/crawl-multiple-urls">Crawl multiple URLs</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/crawl-relative-links">Crawl a website with relative links</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/crawl-single-url">Crawl a single URL</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/crawl-sitemap">Crawl a sitemap</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/crawl-some-links">Crawl some links on a website</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/forms">Forms</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/map-and-reduce">Dataset Map and Reduce methods</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/playwright-crawler">Playwright crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/puppeteer-crawler">Puppeteer crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/puppeteer-recursive-crawl">Puppeteer recursive crawl</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/puppeteer-with-proxy">Puppeteer with proxy</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/synchronous-run">Synchronous run</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/examples/use-stealth-mode">Use stealth mode</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/apify">Apify</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Crawlers</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/basic-crawler">BasicCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/cheerio-crawler">CheerioCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/playwright-crawler">PlaywrightCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/puppeteer-crawler">PuppeteerCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/statistics">Statistics</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Result Stores</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/dataset">Dataset</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/key-value-store">KeyValueStore</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Scaling</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/autoscaled-pool">AutoscaledPool</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/session">Session</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/session-pool">SessionPool</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/proxy-configuration">ProxyConfiguration</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/snapshotter">Snapshotter</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/system-status">SystemStatus</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Sources</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/request">Request</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/request-list">RequestList</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/request-queue">RequestQueue</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/pseudo-url">PseudoUrl</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Utilities</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/utils">utils</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/log">utils.log</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/playwright">utils.playwright</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/puppeteer">utils.puppeteer</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/social">utils.social</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Type Definitions<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Constructor Options</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/autoscaled-pool-options">AutoscaledPoolOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/basic-crawler-options">BasicCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/cheerio-crawler-options">CheerioCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/playwright-crawler-options">PlaywrightCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/playwright-launch-context">PlaywrightLaunchContext</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/puppeteer-crawler-options">PuppeteerCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/puppeteer-launch-context">PuppeteerLaunchContext</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/proxy-configuration-options">ProxyConfigurationOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/proxy-info">ProxyInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/logger-options">LoggerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/request-options">RequestOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/request-list-options">RequestListOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/request-as-browser-options">RequestAsBrowserOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/session-options">SessionOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/session-pool-options">SessionPoolOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/snapshotter-options">SnapshotterOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/stealth-options">StealthOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/system-status-options">SystemStatusOptions</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Crawlers</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/cheerio-handle-page">CheerioHandlePage</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/cheerio-handle-page-inputs">CheerioHandlePageInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/handle-failed-request">HandleFailedRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/handle-failed-request-input">HandleFailedRequestInput</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/handle-request">HandleRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/handle-request-inputs">HandleRequestInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/prepare-request">PrepareRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/prepare-request-inputs">PrepareRequestInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/puppeteer-handle-page">PuppeteerHandlePage</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/puppeteer-handle-page-inputs">PuppeteerHandlePageInputs</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Dataset</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/dataset-consumer">DatasetConsumer</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/dataset-mapper">DatasetMapper</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/dataset-reducer">DatasetReducer</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - KeyValueStore</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/key-consumer">KeyConsumer</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Sessions</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/create-session">CreateSession</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Utilities</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/request-transform">RequestTransform</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Return Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/actor-run">ActorRun</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/api/apify-call-error">ApifyCallError</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/apify-env">ApifyEnv</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/dataset-content">DatasetContent</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/memory-info">MemoryInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/queue-operation-info">QueueOperationInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/request-list-state">RequestListState</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/session-state">SessionState</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/social-handles">SocialHandles</a></li><li class="navListItem"><a class="navItem" href="/docs/1.2.0/typedefs/system-info">SystemInfo</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Migration to version 1</h1></header><article><div><span><ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#migration-guide">Migration Guide</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#running-on-apify-platform">Running on Apify Platform</a></li>
+<li><a href="#handler-arguments-are-now-crawling-context">Handler arguments are now Crawling Context</a>
+<ul>
+<li><a href="#map-of-crawling-contexts-and-their-ids"><code>Map</code> of crawling contexts and their IDs</a></li>
+<li><a href="#autoscaledpool-was-moved-under-crawlingcontextcrawler"><code>autoscaledPool</code> was moved under <code>crawlingContext.crawler</code></a></li>
+</ul></li>
+<li><a href="#replacement-of-puppeteerpool-with-browserpool">Replacement of <code>PuppeteerPool</code> with <code>BrowserPool</code></a>
+<ul>
+<li><a href="#access-to-running-browserpool">Access to running <code>BrowserPool</code></a></li>
+<li><a href="#pages-now-have-ids">Pages now have IDs</a></li>
+<li><a href="#configuration-and-lifecycle-hooks">Configuration and lifecycle hooks</a></li>
+<li><a href="#introduction-of-browsercontroller">Introduction of <code>BrowserController</code></a></li>
+<li><a href="#browserpool-methods-vs-puppeteerpool"><code>BrowserPool</code> methods vs <code>PuppeteerPool</code></a></li>
+</ul></li>
+<li><a href="#updated-puppeteercrawleroptions">Updated <code>PuppeteerCrawlerOptions</code></a>
+<ul>
+<li><a href="#removal-of-gotofunction">Removal of <code>gotoFunction</code></a></li>
+<li><a href="#launchpuppeteeroptions--launchcontext"><code>launchPuppeteerOptions</code> =&gt; <code>launchContext</code></a></li>
+<li><a href="#removal-of-launchpuppeteerfunction">Removal of <code>launchPuppeteerFunction</code></a></li>
+</ul></li>
+<li><a href="#launch-functions">Launch functions</a>
+<ul>
+<li><a href="#updated-arguments">Updated arguments</a></li>
+<li><a href="#custom-modules">Custom modules</a></li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h2>
+<p>After 3.5 years of rapid development and a lot of breaking changes and deprecations,
+here comes the result - <strong>Apify SDK v1</strong>. There were two goals for this release. <strong>Stability</strong>
+and <strong>adding support for more browsers</strong> - Firefox and Webkit (Safari).</p>
+<p>The SDK has grown quite popular over the years, powering thousands of web scraping
+and automation projects. We think our developers deserve a stable environment to work
+in and by releasing SDK v1, <strong>we commit to only make breaking changes once a year,
+with a new major release</strong>.</p>
+<p>We added support for more browsers by replacing <code>PuppeteerPool</code> with
+<a href="https://github.com/apify/browser-pool" target="_blank" rel="noopener"><code>browser-pool</code></a>. A new library that we created
+specifically for this purpose. It builds on the ideas from <code>PuppeteerPool</code> and extends
+them to support <a href="https://github.com/microsoft/playwright" target="_blank" rel="noopener">Playwright</a>. Playwright is
+a browser automation library similar to Puppeteer. It works with all well known browsers
+and uses almost the same interface as Puppeteer, while adding useful features and simplifying
+common tasks. Don't worry, you can still use Puppeteer with the new <code>BrowserPool</code>.</p>
+<p>A large breaking change is that neither <code>puppeteer</code> nor <code>playwright</code> are bundled with
+the SDK v1. To make the choice of a library easier and installs faster, users will
+have to install the selected modules and versions themselves. This allows us to add
+support for even more libraries in the future.</p>
+<p>Thanks to the addition of Playwright we now have a <code>PlaywrightCrawler</code>. It is very similar
+to <code>PuppeteerCrawler</code> and you can pick the one you prefer. It also means we needed to make
+some interface changes. The <code>launchPuppeteerFunction</code> option of <code>PuppeteerCrawler</code> is gone
+and <code>launchPuppeteerOptions</code> were replaced by <code>launchContext</code>. We also moved things around
+in the <code>handlePageFunction</code> arguments. See the
+<a href="#migration-guide">migration guide</a>
+for more detailed explanation and migration examples.</p>
+<p>What's in store for SDK v2? We want to split the SDK into smaller libraries,
+so that everyone can install only the things they need. We plan a TypeScript migration
+to make crawler development faster and safer. Finally, we will take a good look
+at the interface of the whole SDK and update it to improve the developer experience.
+Bug fixes and scraping features will of course keep landing in versions 1.X as well.</p>
+<h2><a class="anchor" aria-hidden="true" id="migration-guide"></a><a href="#migration-guide" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Migration Guide</h2>
+<p>There are a lot of breaking changes in the v1.0.0 release, but we're confident that
+updating your code will be a matter of minutes. Below, you'll find examples how to do it
+and also short tutorials how to use many of the new features.</p>
+<blockquote>
+<p>Many of the new features are made with power users in mind,
+so don't worry if something looks complicated. You don't need to use it.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="installation"></a><a href="#installation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h2>
+<p>Previous versions of the SDK bundled the <code>puppeteer</code> package, so you did not have to install
+it. SDK v1 supports also <code>playwright</code> and we don't want to force users to install both.
+To install SDK v1 with Puppeteer (same as previous versions), run:</p>
+<pre><code class="hljs css language-bash"><span class="token function">npm</span> <span class="token function">install</span> apify puppeteer
+</code></pre>
+<p>To install SDK v1 with Playwright run:</p>
+<pre><code class="hljs css language-bash"><span class="token function">npm</span> <span class="token function">install</span> apify playwright
+</code></pre>
+<blockquote>
+<p>While we tried to add the most important functionality in the initial release,
+you may find that there are still some utilities or options that are only
+supported by Puppeteer and not Playwright.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="running-on-apify-platform"></a><a href="#running-on-apify-platform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Running on Apify Platform</h2>
+<p>If you want to make use of Playwright on the Apify Platform, you need to use a Docker image
+that supports Playwright. We've created them for you, so head over to the new
+<a href="https://sdk.apify.com/docs/guides/docker-images" target="_blank" rel="noopener">Docker image guide</a> and pick the one
+that best suits your needs.</p>
+<p>Note that your <code>package.json</code> <strong>MUST</strong> include <code>puppeteer</code> and/or <code>playwright</code> as dependencies.
+If you don't list them, the libraries will be uninstalled from your <code>node_modules</code> folder
+when you build your actors.</p>
+<h2><a class="anchor" aria-hidden="true" id="handler-arguments-are-now-crawling-context"></a><a href="#handler-arguments-are-now-crawling-context" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Handler arguments are now Crawling Context</h2>
+<p>Previously, arguments of user provided handler functions were provided in separate
+objects. This made it difficult to track values across function invocations.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> <span class="token function-variable function">handlePageFunction</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">args1</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    args1<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">'proxyInfo'</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">handleFailedRequestFunction</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">args2</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    args2<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">'proxyInfo'</span><span class="token punctuation">)</span> <span class="token comment">// false</span>
+<span class="token punctuation">}</span>
+
+args1 <span class="token operator">===</span> args2 <span class="token comment">// false</span>
+</code></pre>
+<p>This happened because a new arguments object was created for each function.
+With SDK v1 we now have a single object called Crawling Context.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> <span class="token function-variable function">handlePageFunction</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">crawlingContext1</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    crawlingContext1<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">'proxyInfo'</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">handleFailedRequestFunction</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">crawlingContext2</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    crawlingContext2<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">'proxyInfo'</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// All contexts are the same object.</span>
+crawlingContext1 <span class="token operator">===</span> crawlingContext2 <span class="token comment">// true</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="map-of-crawling-contexts-and-their-ids"></a><a href="#map-of-crawling-contexts-and-their-ids" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Map</code> of crawling contexts and their IDs</h3>
+<p>Now that all the objects are the same, we can keep track of all running crawling contexts.
+We can do that by working with the new <code>id</code> property of <code>crawlingContext</code>
+This is useful when you need cross-context access.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">let</span> masterContextId<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">handlePageFunction</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> id<span class="token punctuation">,</span> page<span class="token punctuation">,</span> request<span class="token punctuation">,</span> crawler <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>request<span class="token punctuation">.</span>userData<span class="token punctuation">.</span>masterPage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        masterContextId <span class="token operator">=</span> id<span class="token punctuation">;</span>
+        <span class="token comment">// Prepare the master page.</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> masterContext <span class="token operator">=</span> crawler<span class="token punctuation">.</span>crawlingContexts<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>masterContextId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> masterPage <span class="token operator">=</span> masterContext<span class="token punctuation">.</span>page<span class="token punctuation">;</span>
+        <span class="token keyword">const</span> masterRequest <span class="token operator">=</span> masterContext<span class="token punctuation">.</span>request<span class="token punctuation">;</span>
+        <span class="token comment">// Now we can manipulate the master data from another handlePageFunction.</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="autoscaledpool-was-moved-under-crawlingcontextcrawler"></a><a href="#autoscaledpool-was-moved-under-crawlingcontextcrawler" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>autoscaledPool</code> was moved under <code>crawlingContext.crawler</code></h3>
+<p>To prevent bloat and to make access to certain key objects easier, we exposed a <code>crawler</code>
+property on the handle page arguments.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> <span class="token function-variable function">handePageFunction</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> request<span class="token punctuation">,</span> page<span class="token punctuation">,</span> crawler <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">await</span> crawler<span class="token punctuation">.</span>requestQueue<span class="token punctuation">.</span><span class="token function">addRequest</span><span class="token punctuation">(</span><span class="token punctuation">{</span> url<span class="token operator">:</span> <span class="token string">'https://example.com'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> crawler<span class="token punctuation">.</span>autoscaledPool<span class="token punctuation">.</span><span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>This also means that some shorthands like <code>puppeteerPool</code> or <code>autoscaledPool</code> were
+no longer necessary.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> <span class="token function-variable function">handePageFunction</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">crawlingContext</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    crawlingContext<span class="token punctuation">.</span>autoscaledPool <span class="token comment">// does NOT exist anymore</span>
+    crawlingContext<span class="token punctuation">.</span>crawler<span class="token punctuation">.</span>autoscaledPool <span class="token comment">// &lt;= this is correct usage</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="replacement-of-puppeteerpool-with-browserpool"></a><a href="#replacement-of-puppeteerpool-with-browserpool" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Replacement of <code>PuppeteerPool</code> with <code>BrowserPool</code></h2>
+<p><code>BrowserPool</code> was created to extend <code>PuppeteerPool</code> with the ability to manage other
+browser automation libraries. The API is similar, but not the same.</p>
+<h3><a class="anchor" aria-hidden="true" id="access-to-running-browserpool"></a><a href="#access-to-running-browserpool" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Access to running <code>BrowserPool</code></h3>
+<p>Only <code>PuppeteerCrawler</code> and <code>PlaywrightCrawler</code> use <code>BrowserPool</code>. You can access it
+on the <code>crawler</code> object.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> crawler <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Apify<span class="token punctuation">.</span>PlaywrightCrawler</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token function-variable function">handlePageFunction</span><span class="token operator">:</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> page<span class="token punctuation">,</span> crawler <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        crawler<span class="token punctuation">.</span>browserPool <span class="token comment">// &lt;-----</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+crawler<span class="token punctuation">.</span>browserPool <span class="token comment">// &lt;-----</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="pages-now-have-ids"></a><a href="#pages-now-have-ids" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pages now have IDs</h3>
+<p>And they're equal to <code>crawlingContext.id</code> which gives you access to full <code>crawlingContext</code>
+in hooks. See <a href="#configuration-and-lifecycle-hooks">Lifecycle hooks</a> below.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> pageId <span class="token operator">=</span> browserPool<span class="token punctuation">.</span>getPageId
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="configuration-and-lifecycle-hooks"></a><a href="#configuration-and-lifecycle-hooks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration and lifecycle hooks</h3>
+<p>The most important addition with <code>BrowserPool</code> are the
+<a href="https://github.com/apify/browser-pool#browserpool" target="_blank" rel="noopener">lifecycle hooks</a>.
+You can access them via <code>browserPoolOptions</code> in both crawlers. A full list of <code>browserPoolOptions</code>
+can be found in <a href="https://github.com/apify/browser-pool#new-browserpooloptions" target="_blank" rel="noopener"><code>browser-pool</code> readme</a>.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> crawler <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Apify<span class="token punctuation">.</span>PuppeteerCrawler</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    browserPoolOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+        retireBrowserAfterPageCount<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+        preLaunchHooks<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">pageId<span class="token punctuation">,</span> launchContext</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+                <span class="token keyword">const</span> <span class="token punctuation">{</span> request <span class="token punctuation">}</span> <span class="token operator">=</span> crawler<span class="token punctuation">.</span>crawlingContexts<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>pageId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>request<span class="token punctuation">.</span>userData<span class="token punctuation">.</span>useHeadful <span class="token operator">===</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    launchContext<span class="token punctuation">.</span>launchOptions<span class="token punctuation">.</span>headless <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="introduction-of-browsercontroller"></a><a href="#introduction-of-browsercontroller" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction of <code>BrowserController</code></h3>
+<p><a href="https://github.com/apify/browser-pool#browsercontroller" target="_blank" rel="noopener"><code>BrowserController</code></a>
+is a class of <code>browser-pool</code> that's responsible for browser management.
+Its purpose is to provide a single API for working with both Puppeteer and Playwright browsers.
+It works automatically in the background, but if you ever wanted to close a browser properly,
+you should use a <code>browserController</code> to do it. You can find it in the handle page arguments.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> <span class="token function-variable function">handlePageFunction</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> page<span class="token punctuation">,</span> browserController <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">// Wrong usage. Could backfire because it bypasses BrowserPool.</span>
+    <span class="token keyword">await</span> page<span class="token punctuation">.</span><span class="token function">browser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Correct usage. Allows graceful shutdown.</span>
+    <span class="token keyword">await</span> browserController<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> cookies <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token comment">/* some cookie objects */</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// Wrong usage. Will only work in Puppeteer and not Playwright.</span>
+    <span class="token keyword">await</span> page<span class="token punctuation">.</span><span class="token function">setCookies</span><span class="token punctuation">(</span><span class="token operator">...</span>cookies<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Correct usage. Will work in both.</span>
+    <span class="token keyword">await</span> browserController<span class="token punctuation">.</span><span class="token function">setCookies</span><span class="token punctuation">(</span>page<span class="token punctuation">,</span> cookies<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The <code>BrowserController</code> also includes important information about the browser, such as
+the context it was launched with. This was difficult to do before SDK v1.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> <span class="token function-variable function">handlePageFunction</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> browserController <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">// Information about the proxy used by the browser</span>
+    browserController<span class="token punctuation">.</span>launchContext<span class="token punctuation">.</span>proxyInfo
+
+    <span class="token comment">// Session used by the browser</span>
+    browserController<span class="token punctuation">.</span>launchContext<span class="token punctuation">.</span>session
+<span class="token punctuation">}</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="browserpool-methods-vs-puppeteerpool"></a><a href="#browserpool-methods-vs-puppeteerpool" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>BrowserPool</code> methods vs <code>PuppeteerPool</code></h3>
+<p>Some functions were removed (in line with earlier deprecations), and some were changed a bit:</p>
+<pre><code class="hljs css language-js"><span class="token comment">// OLD</span>
+<span class="token keyword">await</span> puppeteerPool<span class="token punctuation">.</span><span class="token function">recyclePage</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// NEW</span>
+<span class="token keyword">await</span> page<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre><code class="hljs css language-js"><span class="token comment">// OLD</span>
+<span class="token keyword">await</span> puppeteerPool<span class="token punctuation">.</span><span class="token function">retire</span><span class="token punctuation">(</span>page<span class="token punctuation">.</span><span class="token function">browser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// NEW</span>
+browserPool<span class="token punctuation">.</span><span class="token function">retireBrowserByPage</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre><code class="hljs css language-js"><span class="token comment">// OLD</span>
+<span class="token keyword">await</span> puppeteerPool<span class="token punctuation">.</span><span class="token function">serveLiveViewSnapshot</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// NEW</span>
+<span class="token comment">// There's no LiveView in BrowserPool</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="updated-puppeteercrawleroptions"></a><a href="#updated-puppeteercrawleroptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Updated <code>PuppeteerCrawlerOptions</code></h2>
+<p>To keep <code>PuppeteerCrawler</code> and <code>PlaywrightCrawler</code> consistent, we updated the options.</p>
+<h3><a class="anchor" aria-hidden="true" id="removal-of-gotofunction"></a><a href="#removal-of-gotofunction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Removal of <code>gotoFunction</code></h3>
+<p>The concept of a configurable <code>gotoFunction</code> is not ideal. Especially since we use a modified
+<code>gotoExtended</code>. Users have to know this when they override <code>gotoFunction</code> if they want to
+extend default behavior. We decided to replace <code>gotoFunction</code> with <code>preNavigationHooks</code> and
+<code>postNavigationHooks</code>.</p>
+<p>The following example illustrates how <code>gotoFunction</code> makes things complicated.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> <span class="token function-variable function">gotoFunction</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> request<span class="token punctuation">,</span> page <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">// pre-processing</span>
+    <span class="token keyword">await</span> <span class="token function">makePageStealthy</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Have to remember how to do this:</span>
+    <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">gotoExtended</span><span class="token punctuation">(</span>page<span class="token punctuation">,</span> request<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token comment">/* have to remember the defaults */</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// post-processing</span>
+    <span class="token keyword">await</span> page<span class="token punctuation">.</span><span class="token function">evaluate</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        window<span class="token punctuation">.</span>foo <span class="token operator">=</span> <span class="token string">'bar'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Must not forget!</span>
+    <span class="token keyword">return</span> response<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> crawler <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Apify<span class="token punctuation">.</span>PuppeteerCrawler</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    gotoFunction<span class="token punctuation">,</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>With <code>preNavigationHooks</code> and <code>postNavigationHooks</code> it's much easier. <code>preNavigationHooks</code>
+are called with two arguments: <code>crawlingContext</code> and <code>gotoOptions</code>. <code>postNavigationHooks</code>
+are called only with <code>crawlingContext</code>.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> preNavigationHooks <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> page <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">makePageStealthy</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> postNavigationHooks <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> page <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> page<span class="token punctuation">.</span><span class="token function">evaluate</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        window<span class="token punctuation">.</span>foo <span class="token operator">=</span> <span class="token string">'bar'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">const</span> crawler <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Apify<span class="token punctuation">.</span>PuppeteerCrawler</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    preNavigationHooks<span class="token punctuation">,</span>
+    postNavigationHooks<span class="token punctuation">,</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="launchpuppeteeroptions--launchcontext"></a><a href="#launchpuppeteeroptions--launchcontext" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>launchPuppeteerOptions</code> =&gt; <code>launchContext</code></h3>
+<p>Those were always a point of confusion because they merged custom Apify options with
+<code>launchOptions</code> of Puppeteer.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> launchPuppeteerOptions <span class="token operator">=</span> <span class="token punctuation">{</span>
+    useChrome<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// Apify option</span>
+    headless<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// Puppeteer option</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Use the new <code>launchContext</code> object, which explicitly defines <code>launchOptions</code>.
+<code>launchPuppeteerOptions</code> were removed.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> crawler <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Apify<span class="token punctuation">.</span>PuppeteerCrawler</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    launchContext<span class="token operator">:</span> <span class="token punctuation">{</span>
+        useChrome<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// Apify option</span>
+        launchOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+            headless<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token comment">// Puppeteer option</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>LaunchContext is also a type of <a href="https://github.com/apify/browser-pool" target="_blank" rel="noopener"><code>browser-pool</code></a> and
+the structure is exactly the same there. SDK only adds extra options.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="removal-of-launchpuppeteerfunction"></a><a href="#removal-of-launchpuppeteerfunction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Removal of <code>launchPuppeteerFunction</code></h3>
+<p><code>browser-pool</code> introduces the idea of <a href="https://github.com/apify/browser-pool#browserpool" target="_blank" rel="noopener">lifecycle hooks</a>,
+which are functions that are executed when a certain event in the browser lifecycle happens.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> <span class="token function-variable function">launchPuppeteerFunction</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">launchPuppeteerOptions</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>someVariable <span class="token operator">===</span> <span class="token string">'chrome'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        launchPuppeteerOptions<span class="token punctuation">.</span>useChrome <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> Apify<span class="token punctuation">.</span><span class="token function">launchPuppeteer</span><span class="token punctuation">(</span>launchPuppeteerOptions<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> crawler <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Apify<span class="token punctuation">.</span>PuppeteerCrawler</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    launchPuppeteerFunction<span class="token punctuation">,</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Now you can recreate the same functionality with a <code>preLaunchHook</code>:</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> <span class="token function-variable function">maybeLaunchChrome</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">pageId<span class="token punctuation">,</span> launchContext</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>someVariable <span class="token operator">===</span> <span class="token string">'chrome'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        launchContext<span class="token punctuation">.</span>useChrome <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> crawler <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Apify<span class="token punctuation">.</span>PuppeteerCrawler</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    browserPoolOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+        preLaunchHooks<span class="token operator">:</span> <span class="token punctuation">[</span>maybeLaunchChrome<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>This is better in multiple ways. It is consistent across both Puppeteer and Playwright.
+It allows you to easily construct your browsers with pre-defined behavior:</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> preLaunchHooks <span class="token operator">=</span> <span class="token punctuation">[</span>
+    maybeLaunchChrome<span class="token punctuation">,</span>
+    useHeadfulIfNeeded<span class="token punctuation">,</span>
+    injectNewFingerprint<span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+<p>And thanks to the addition of <a href="#handler-arguments-are-now-crawling-context"><code>crawler.crawlingContexts</code></a>
+the functions also have access to the <code>crawlingContext</code> of the <code>request</code> that triggered the launch.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> preLaunchHooks <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">maybeLaunchChrome</span><span class="token punctuation">(</span><span class="token parameter">pageId<span class="token punctuation">,</span> launchContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> request <span class="token punctuation">}</span> <span class="token operator">=</span> crawler<span class="token punctuation">.</span>crawlingContexts<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>pageId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>request<span class="token punctuation">.</span>userData<span class="token punctuation">.</span>useHeadful <span class="token operator">===</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            launchContext<span class="token punctuation">.</span>launchOptions<span class="token punctuation">.</span>headless <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="launch-functions"></a><a href="#launch-functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Launch functions</h2>
+<p>In addition to <code>Apify.launchPuppeteer()</code> we now also have <code>Apify.launchPlaywright()</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="updated-arguments"></a><a href="#updated-arguments" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Updated arguments</h3>
+<p>We <a href="#launchpuppeteeroptions--launchcontext">updated the launch options object</a> because
+it was a frequent source of confusion.</p>
+<pre><code class="hljs css language-js"><span class="token comment">// OLD</span>
+<span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">launchPuppeteer</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    useChrome<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    headless<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// NEW</span>
+<span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">launchPuppeteer</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    useChrome<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    launchOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+        headless<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="custom-modules"></a><a href="#custom-modules" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom modules</h3>
+<p><code>Apify.launchPuppeteer</code> already supported the <code>puppeteerModule</code> option. With Playwright,
+we normalized the name to <code>launcher</code> because the <code>playwright</code> module itself does not
+launch browsers.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> puppeteer <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'puppeteer'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> playwright <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'playwright'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">launchPuppeteer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Is the same as:</span>
+<span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">launchPuppeteer</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    launcher<span class="token operator">:</span> puppeteer
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">launchPlaywright</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Is the same as:</span>
+<span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">launchPlaywright</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    launcher<span class="token operator">:</span> playwright<span class="token punctuation">.</span>chromium
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/1.2.0/guides/docker-images"><span class="arrow-prev">← </span><span>Running in Docker</span></a><a class="docs-next button" href="/docs/1.2.0/examples/accept-user-input"><span>Accept user input</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#summary">Summary</a></li><li><a href="#migration-guide">Migration Guide</a></li><li><a href="#installation">Installation</a></li><li><a href="#running-on-apify-platform">Running on Apify Platform</a></li><li><a href="#handler-arguments-are-now-crawling-context">Handler arguments are now Crawling Context</a><ul class="toc-headings"><li><a href="#map-of-crawling-contexts-and-their-ids"><code>Map</code> of crawling contexts and their IDs</a></li><li><a href="#autoscaledpool-was-moved-under-crawlingcontextcrawler"><code>autoscaledPool</code> was moved under <code>crawlingContext.crawler</code></a></li></ul></li><li><a href="#replacement-of-puppeteerpool-with-browserpool">Replacement of <code>PuppeteerPool</code> with <code>BrowserPool</code></a><ul class="toc-headings"><li><a href="#access-to-running-browserpool">Access to running <code>BrowserPool</code></a></li><li><a href="#pages-now-have-ids">Pages now have IDs</a></li><li><a href="#configuration-and-lifecycle-hooks">Configuration and lifecycle hooks</a></li><li><a href="#introduction-of-browsercontroller">Introduction of <code>BrowserController</code></a></li><li><a href="#browserpool-methods-vs-puppeteerpool"><code>BrowserPool</code> methods vs <code>PuppeteerPool</code></a></li></ul></li><li><a href="#updated-puppeteercrawleroptions">Updated <code>PuppeteerCrawlerOptions</code></a><ul class="toc-headings"><li><a href="#removal-of-gotofunction">Removal of <code>gotoFunction</code></a></li><li><a href="#launchpuppeteeroptions--launchcontext"><code>launchPuppeteerOptions</code> =&gt; <code>launchContext</code></a></li><li><a href="#removal-of-launchpuppeteerfunction">Removal of <code>launchPuppeteerFunction</code></a></li></ul></li><li><a href="#launch-functions">Launch functions</a><ul class="toc-headings"><li><a href="#updated-arguments">Updated arguments</a></li><li><a href="#custom-modules">Custom modules</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/apify_logo.svg" alt="Apify SDK" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/guides/motivation">Guide</a><a href="/docs/examples/crawl-multiple-urls">Examples</a><a href="/docs/api/apify">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/apify" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/apify" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://www.facebook.com/apifytech" target="_blank" rel="noreferrer noopener">Facebook</a></div><div><h5>More</h5><a href="https://apify.com" target="_blank">Apify Cloud</a><a href="https://docusaurus.io" target="_blank">Docusaurus</a><a href="https://github.com/apify/apify-js" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2021 Apify Technologies s.r.o.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '64ce2544769e34add0e6402688c86e92',
+                indexName: 'apify_sdk',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["version:1.2.0"]}
+              });
+            </script></body></html>

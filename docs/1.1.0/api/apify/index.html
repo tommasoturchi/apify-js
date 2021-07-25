@@ -245,6 +245,8 @@ class.</li>
 time to persist their state, in order to avoid repeating all work when the actor restarts. This event is automatically emitted together with the
 <code>migrating</code> event, in which case the <code>isMigrating</code> flag is set to <code>true</code>. Otherwise the flag is <code>false</code>. Note that the <code>persistState</code> event is
 provided merely for user convenience, you can achieve the same effect using <code>setInterval()</code> and listening for the <code>migrating</code> event.</li>
+<li><code>aborting</code>: <code>void</code> Emitted when the actor running on the Apify platform was aborted by user with gracefully abort flag. You can use it to
+persist the state of the actor graceful abort run.</li>
 </ul>
 <hr>
 <p><a name="getenv"></a></p>
