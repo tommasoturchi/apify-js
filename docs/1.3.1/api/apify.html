@@ -1,0 +1,664 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Apify · Apify SDK</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;a name=&quot;apify&quot;&gt;&lt;/a&gt;"/><meta name="docsearch:version" content="1.3.1"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Apify · Apify SDK"/><meta property="og:type" content="website"/><meta property="og:url" content="https://sdk.apify.com/"/><meta property="og:description" content="&lt;a name=&quot;apify&quot;&gt;&lt;/a&gt;"/><meta property="og:image" content="https://sdk.apify.com/img/apify_og_SDK.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://sdk.apify.com/img/apify_og_SDK.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/apify_logo.svg" alt="Apify SDK"/><h2 class="headerTitleWithLogo">Apify SDK</h2></a><a href="/versions"><h3>1.3.1</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class="siteNavGroupActive"><a href="/docs/1.3.1/guides/motivation" target="_self">Guide</a></li><li class="siteNavGroupActive"><a href="/docs/1.3.1/examples/crawl-multiple-urls" target="_self">Examples</a></li><li class="siteNavGroupActive siteNavItemActive"><a href="/docs/1.3.1/api/apify" target="_self">API Reference</a></li><li class=""><a href="https://github.com/apify/apify-js" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Guide<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/1.3.1/guides/motivation">Motivation</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/guides/quick-start">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/guides/apify-platform">Apify Platform</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/guides/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/guides/request-storage">Request Storage</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/guides/result-storage">Result Storage</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/guides/environment-variables">Environment Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/guides/proxy-management">Proxy Management</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/guides/session-management">Session Management</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/guides/type-script-actor">TypeScript Actors</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/guides/docker-images">Running in Docker</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/guides/migration-to-v1">Migration to version 1</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Examples<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/accept-user-input">Accept user input</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/add-data-to-dataset">Add data to dataset</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/basic-crawler">Basic crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/call-actor">Call actor</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/capture-screenshot">Capture a screenshot</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/cheerio-crawler">Cheerio crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/crawl-all-links">Crawl all links on a website</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/crawl-multiple-urls">Crawl multiple URLs</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/crawl-relative-links">Crawl a website with relative links</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/crawl-single-url">Crawl a single URL</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/crawl-sitemap">Crawl a sitemap</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/crawl-some-links">Crawl some links on a website</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/forms">Forms</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/map-and-reduce">Dataset Map and Reduce methods</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/playwright-crawler">Playwright crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/puppeteer-crawler">Puppeteer crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/puppeteer-recursive-crawl">Puppeteer recursive crawl</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/puppeteer-with-proxy">Puppeteer with proxy</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/synchronous-run">Synchronous run</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/examples/use-stealth-mode">Use stealth mode</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/docs/1.3.1/api/apify">Apify</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/configuration">Configuration</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Crawlers</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/basic-crawler">BasicCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/cheerio-crawler">CheerioCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/playwright-crawler">PlaywrightCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/puppeteer-crawler">PuppeteerCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/statistics">Statistics</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Result Stores</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/dataset">Dataset</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/key-value-store">KeyValueStore</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Scaling</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/autoscaled-pool">AutoscaledPool</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/session">Session</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/session-pool">SessionPool</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/proxy-configuration">ProxyConfiguration</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/snapshotter">Snapshotter</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/system-status">SystemStatus</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Sources</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/request">Request</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/request-list">RequestList</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/request-queue">RequestQueue</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/pseudo-url">PseudoUrl</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Utilities</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/utils">utils</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/log">utils.log</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/playwright">utils.playwright</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/puppeteer">utils.puppeteer</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/social">utils.social</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Type Definitions<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Constructor Options</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/autoscaled-pool-options">AutoscaledPoolOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/basic-crawler-options">BasicCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/cheerio-crawler-options">CheerioCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/playwright-crawler-options">PlaywrightCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/playwright-launch-context">PlaywrightLaunchContext</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/puppeteer-crawler-options">PuppeteerCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/puppeteer-launch-context">PuppeteerLaunchContext</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/proxy-configuration-options">ProxyConfigurationOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/proxy-info">ProxyInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/logger-options">LoggerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/request-options">RequestOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/request-list-options">RequestListOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/request-as-browser-options">RequestAsBrowserOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/session-options">SessionOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/session-pool-options">SessionPoolOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/snapshotter-options">SnapshotterOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/stealth-options">StealthOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/system-status-options">SystemStatusOptions</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Crawlers</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/cheerio-handle-page">CheerioHandlePage</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/cheerio-handle-page-inputs">CheerioHandlePageInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/handle-failed-request">HandleFailedRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/handle-failed-request-input">HandleFailedRequestInput</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/handle-request">HandleRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/handle-request-inputs">HandleRequestInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/prepare-request">PrepareRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/prepare-request-inputs">PrepareRequestInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/puppeteer-handle-page">PuppeteerHandlePage</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/puppeteer-handle-page-inputs">PuppeteerHandlePageInputs</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Dataset</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/dataset-consumer">DatasetConsumer</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/dataset-mapper">DatasetMapper</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/dataset-reducer">DatasetReducer</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - KeyValueStore</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/key-consumer">KeyConsumer</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Sessions</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/create-session">CreateSession</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Utilities</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/request-transform">RequestTransform</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Return Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/actor-run">ActorRun</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/api/apify-call-error">ApifyCallError</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/apify-env">ApifyEnv</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/dataset-content">DatasetContent</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/memory-info">MemoryInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/queue-operation-info">QueueOperationInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/request-list-state">RequestListState</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/session-state">SessionState</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/social-handles">SocialHandles</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3.1/typedefs/system-info">SystemInfo</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Apify</h1></header><article><div><span><p><a name="apify"></a></p>
+<p>The following section describes all functions and properties provided by the <code>apify</code> package, except individual classes and namespaces that have their
+separate, detailed, documentation pages accessible from the left sidebar. To learn how Apify SDK works, we suggest following the
+<a href="../guides/getting-started">Getting Started</a> tutorial.</p>
+<p><strong>Important:</strong></p>
+<blockquote>
+<p>The following functions: <code>addWebhook</code>, <code>call</code>, <code>callTask</code> and <code>newClient</code> invoke features of the <a href="../guides/apify-platform">Apify platform</a> and
+require your scripts to be authenticated. See the <a href="../guides/apify-platform#logging-into-apify-platform-from-apify-sdk">authentication guide</a> for
+instructions.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="apify-class"></a><a href="#apify-class" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify</code> Class</h2>
+<p>As opposed to those helper functions, there is an alternative approach using <code>Apify</code> class (a named export). It has mostly the same API, but the
+methods on <code>Apify</code> instance will use the configuration provided in the constructor. Environment variables will have precedence over this
+configuration.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span> Apify <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'apify'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// use named export to get the class</span>
+
+<span class="token keyword">const</span> sdk <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Apify</span><span class="token punctuation">(</span><span class="token punctuation">{</span> token<span class="token operator">:</span> <span class="token string">'123'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sdk<span class="token punctuation">.</span>config<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'token'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// '123'</span>
+
+<span class="token comment">// the token will be passed to the `call` method automatically</span>
+<span class="token keyword">const</span> run <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">sdk</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token string">'apify/hello-world'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> myInput<span class="token operator">:</span> <span class="token number">123</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Received message: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>run<span class="token punctuation">.</span>output<span class="token punctuation">.</span>body<span class="token punctuation">.</span>message<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Another example shows how the default dataset name can be changed:</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span> Apify <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'apify'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// use named export to get the class</span>
+
+<span class="token keyword">const</span> sdk <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Apify</span><span class="token punctuation">(</span><span class="token punctuation">{</span> defaultDatasetId<span class="token operator">:</span> <span class="token string">'custom-name'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">await</span> sdk<span class="token punctuation">.</span><span class="token function">pushData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> myValue<span class="token operator">:</span> <span class="token number">123</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>is equivalent to:</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> Apify <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'apify'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// use default export to get the helper functions</span>
+
+<span class="token keyword">const</span> dataset <span class="token operator">=</span> <span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">openDataset</span><span class="token punctuation">(</span><span class="token string">'custom-name'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">await</span> dataset<span class="token punctuation">.</span><span class="token function">pushData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> myValue<span class="token operator">:</span> <span class="token number">123</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>See <a href="../api/configuration"><code>Configuration</code></a> for details about what can be configured and what are the default values.</p>
+<hr>
+<p><a name="addwebhook"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifyaddwebhookoptions"></a><a href="#apifyaddwebhookoptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.addWebhook(options)</code></h2>
+<p>Creates an ad-hoc webhook for the current actor run, which lets you receive a notification when the actor run finished or failed. For more information
+about Apify actor webhooks, please see the <a href="https://docs.apify.com/webhooks" target="_blank" rel="noopener">documentation</a>.</p>
+<p>Note that webhooks are only supported for actors running on the Apify platform. In local environment, the function will print a warning and have no
+effect.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>options</code></strong>: <code>object</code>
+<ul>
+<li><strong><code>eventTypes</code></strong>: <a href="../typedefs/event-types"><code>EventTypes</code></a> - Array of event types, which you can set for actor run, see the
+<a href="https://docs.apify.com/webhooks/events#actor-run" target="_blank" rel="noopener">actor run events</a> in the Apify doc.</li>
+<li><strong><code>requestUrl</code></strong>: <code>string</code> - URL which will be requested using HTTP POST request, when actor run will reach the set event type.</li>
+<li><strong><code>[payloadTemplate]</code></strong>: <code>string</code> - Payload template is a JSON-like string that describes the structure of the webhook POST request payload.
+It uses JSON syntax, extended with a double curly braces syntax for injecting variables <code>{{variable}}</code>. Those variables are resolved at the
+time of the webhook's dispatch, and a list of available variables with their descriptions is available in the
+<a href="https://docs.apify.com/webhooks" target="_blank" rel="noopener">Apify webhook documentation</a>. If <code>payloadTemplate</code> is omitted, the default payload template is used
+(<a href="https://docs.apify.com/webhooks/actions#payload-template" target="_blank" rel="noopener">view docs</a>).</li>
+<li><strong><code>[idempotencyKey]</code></strong>: <code>string</code> - Idempotency key enables you to ensure that a webhook will not be added multiple times in case of an actor
+restart or other situation that would cause the <code>addWebhook()</code> function to be called again. We suggest using the actor run ID as the
+idempotency key. You can get the run ID by calling <a href="../api/apify#getenv"><code>Apify.getEnv()</code></a> function.</li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../typedefs/webhook-run"><code>Promise&lt;(WebhookRun|undefined)&gt;</code></a> - The return value is the Webhook object. For more information, see the
+<a href="https://apify.com/docs/api/v2#/reference/webhooks/webhook-object/get-webhook" target="_blank" rel="noopener">Get webhook</a> API endpoint.</p>
+<hr>
+<p><a name="call"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifycallactid-input-options"></a><a href="#apifycallactid-input-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.call(actId, [input], [options])</code></h2>
+<p>Runs an actor on the Apify platform using the current user account (determined by the <code>APIFY_TOKEN</code> environment variable), waits for the actor to
+finish and fetches its output.</p>
+<p>By passing the <code>waitSecs</code> option you can reduce the maximum amount of time to wait for the run to finish. If the value is less than or equal to zero,
+the function returns immediately after the run is started.</p>
+<p>The result of the function is an <a href="../typedefs/actor-run"><code>ActorRun</code></a> object that contains details about the actor run and its output (if any). If the
+actor run fails, the function throws the <a href="../api/apify-call-error"><code>ApifyCallError</code></a> exception.</p>
+<p>If you want to run an actor task rather than an actor, please use the <a href="../api/apify#calltask"><code>Apify.callTask()</code></a> function instead.</p>
+<p>For more information about actors, read the <a href="https://docs.apify.com/actor" target="_blank" rel="noopener">documentation</a>.</p>
+<p><strong>Example usage:</strong></p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> run <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">Apify</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token string">'apify/hello-world'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> myInput<span class="token operator">:</span> <span class="token number">123</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Received message: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>run<span class="token punctuation">.</span>output<span class="token punctuation">.</span>body<span class="token punctuation">.</span>message<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Internally, the <code>call()</code> function invokes the <a href="https://apify.com/docs/api/v2#/reference/actors/run-collection/run-actor" target="_blank" rel="noopener">Run actor</a> and several other
+API endpoints to obtain the output.</p>
+<p><strong>Throws</strong>:</p>
+<ul>
+<li><a href="../api/apify-call-error"><code>ApifyCallError</code></a> If the run did not succeed, e.g. if it failed or timed out.</li>
+</ul>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>actId</code></strong>: <code>string</code> - Allowed formats are <code>username/actor-name</code>, <code>userId/actor-name</code> or actor ID.</li>
+<li><strong><code>[input]</code></strong>: <code>Object&lt;string, *&gt;</code> - Input for the actor. If it is an object, it will be stringified to JSON and its content type set to
+<code>application/json; charset=utf-8</code>. Otherwise the <code>options.contentType</code> parameter must be provided.</li>
+<li><strong><code>[options]</code></strong>: <code>object</code> - Object with the settings below:
+<ul>
+<li><strong><code>[contentType]</code></strong>: <code>string</code> - Content type for the <code>input</code>. If not specified, <code>input</code> is expected to be an object that will be stringified
+to JSON and content type set to <code>application/json; charset=utf-8</code>. If <code>options.contentType</code> is specified, then <code>input</code> must be a <code>String</code> or
+<code>Buffer</code>.</li>
+<li><strong><code>[token]</code></strong>: <code>string</code> - User API token that is used to run the actor. By default, it is taken from the <code>APIFY_TOKEN</code> environment variable.</li>
+<li><strong><code>[memoryMbytes]</code></strong>: <code>number</code> - Memory in megabytes which will be allocated for the new actor run. If not provided, the run uses memory of
+the default actor run configuration.</li>
+<li><strong><code>[timeoutSecs]</code></strong>: <code>number</code> - Timeout for the actor run in seconds. Zero value means there is no timeout. If not provided, the run uses
+timeout of the default actor run configuration.</li>
+<li><strong><code>[build]</code></strong>: <code>string</code> - Tag or number of the actor build to run (e.g. <code>beta</code> or <code>1.2.345</code>). If not provided, the run uses build tag or
+number from the default actor run configuration (typically <code>latest</code>).</li>
+<li><strong><code>[waitSecs]</code></strong>: <code>number</code> - Maximum time to wait for the actor run to finish, in seconds. If the limit is reached, the returned promise is
+resolved to a run object that will have status <code>READY</code> or <code>RUNNING</code> and it will not contain the actor run output. If <code>waitSecs</code> is null or
+undefined, the function waits for the actor to finish (default behavior).</li>
+<li><strong><code>[fetchOutput]</code></strong>: <code>boolean</code> <code> = true</code> - If <code>false</code> then the function does not fetch output of the actor.</li>
+<li><strong><code>[disableBodyParser]</code></strong>: <code>boolean</code> <code> = false</code> - If <code>true</code> then the function will not attempt to parse the actor's output and will
+return it in a raw <code>Buffer</code>.</li>
+<li><strong><code>[webhooks]</code></strong>: <a href="../typedefs/adhoc-webhook"><code>Array&lt;AdhocWebhook&gt;</code></a> - Specifies optional webhooks associated with the actor run, which can be
+used to receive a notification e.g. when the actor finished or failed, see
+<a href="https://docs.apify.com/webhooks/ad-hoc-webhooks" target="_blank" rel="noopener">ad hook webhooks documentation</a> for detailed description.</li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../typedefs/actor-run"><code>Promise&lt;ActorRun&gt;</code></a></p>
+<hr>
+<p><a name="calltask"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifycalltasktaskid-input-options"></a><a href="#apifycalltasktaskid-input-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.callTask(taskId, [input], [options])</code></h2>
+<p>Runs an actor task on the Apify platform using the current user account (determined by the <code>APIFY_TOKEN</code> environment variable), waits for the task to
+finish and fetches its output.</p>
+<p>By passing the <code>waitSecs</code> option you can reduce the maximum amount of time to wait for the run to finish. If the value is less than or equal to zero,
+the function returns immediately after the run is started.</p>
+<p>The result of the function is an <a href="../typedefs/actor-run"><code>ActorRun</code></a> object that contains details about the actor run and its output (if any). If the
+actor run failed, the function fails with <a href="../api/apify-call-error"><code>ApifyCallError</code></a> exception.</p>
+<p>Note that an actor task is a saved input configuration and options for an actor. If you want to run an actor directly rather than an actor task,
+please use the <a href="../api/apify#call"><code>Apify.call()</code></a> function instead.</p>
+<p>For more information about actor tasks, read the <a href="https://docs.apify.com/tasks" target="_blank" rel="noopener">documentation</a>.</p>
+<p><strong>Example usage:</strong></p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> run <span class="token operator">=</span> <span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">callTask</span><span class="token punctuation">(</span><span class="token string">'bob/some-task'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Received message: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>run<span class="token punctuation">.</span>output<span class="token punctuation">.</span>body<span class="token punctuation">.</span>message<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Internally, the <code>callTask()</code> function calls the <a href="https://apify.com/docs/api/v2#/reference/actor-tasks/run-collection/run-task" target="_blank" rel="noopener">Run task</a> and several
+other API endpoints to obtain the output.</p>
+<p><strong>Throws</strong>:</p>
+<ul>
+<li><a href="../api/apify-call-error"><code>ApifyCallError</code></a> If the run did not succeed, e.g. if it failed or timed out.</li>
+</ul>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>taskId</code></strong>: <code>string</code> - Allowed formats are <code>username/task-name</code>, <code>userId/task-name</code> or task ID.</li>
+<li><strong><code>[input]</code></strong>: <code>Object&lt;string, *&gt;</code> - Input overrides for the actor task. If it is an object, it will be stringified to JSON and its content type
+set to <code>application/json; charset=utf-8</code>. Provided input will be merged with actor task input.</li>
+<li><strong><code>[options]</code></strong>: <code>object</code> - Object with the settings below:
+<ul>
+<li><strong><code>[token]</code></strong>: <code>string</code> - User API token that is used to run the actor. By default, it is taken from the <code>APIFY_TOKEN</code> environment variable.</li>
+<li><strong><code>[memoryMbytes]</code></strong>: <code>number</code> - Memory in megabytes which will be allocated for the new actor task run. If not provided, the run uses memory
+of the default actor run configuration.</li>
+<li><strong><code>[timeoutSecs]</code></strong>: <code>number</code> - Timeout for the actor task run in seconds. Zero value means there is no timeout. If not provided, the run uses
+timeout of the default actor run configuration.</li>
+<li><strong><code>[build]</code></strong>: <code>string</code> - Tag or number of the actor build to run (e.g. <code>beta</code> or <code>1.2.345</code>). If not provided, the run uses build tag or
+number from the default actor run configuration (typically <code>latest</code>).</li>
+<li><strong><code>[waitSecs]</code></strong>: <code>number</code> - Maximum time to wait for the actor task run to finish, in seconds. If the limit is reached, the returned promise
+is resolved to a run object that will have status <code>READY</code> or <code>RUNNING</code> and it will not contain the actor run output. If <code>waitSecs</code> is null or
+undefined, the function waits for the actor task to finish (default behavior).</li>
+<li><strong><code>[webhooks]</code></strong>: <a href="../typedefs/adhoc-webhook"><code>Array&lt;AdhocWebhook&gt;</code></a> - Specifies optional webhooks associated with the actor run, which can be
+used to receive a notification e.g. when the actor finished or failed, see
+<a href="https://docs.apify.com/webhooks/ad-hoc-webhooks" target="_blank" rel="noopener">ad hook webhooks documentation</a> for detailed description.</li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../typedefs/actor-run"><code>Promise&lt;ActorRun&gt;</code></a></p>
+<hr>
+<p><a name="createproxyconfiguration"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifycreateproxyconfigurationproxyconfigurationoptions"></a><a href="#apifycreateproxyconfigurationproxyconfigurationoptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.createProxyConfiguration([proxyConfigurationOptions])</code></h2>
+<p>Creates a proxy configuration and returns a promise resolving to an instance of the <a href="../api/proxy-configuration"><code>ProxyConfiguration</code></a> class that is
+already initialized.</p>
+<p>Configures connection to a proxy server with the provided options. Proxy servers are used to prevent target websites from blocking your crawlers based
+on IP address rate limits or blacklists. Setting proxy configuration in your crawlers automatically configures them to use the selected proxies for
+all connections.</p>
+<p>For more details and code examples, see the <a href="../api/proxy-configuration"><code>ProxyConfiguration</code></a> class.</p>
+<pre><code class="hljs css language-javascript">
+<span class="token comment">// Returns initialized proxy configuration class</span>
+<span class="token keyword">const</span> proxyConfiguration <span class="token operator">=</span> <span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">createProxyConfiguration</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    groups<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'GROUP1'</span><span class="token punctuation">,</span> <span class="token string">'GROUP2'</span><span class="token punctuation">]</span> <span class="token comment">// List of Apify proxy groups</span>
+    countryCode<span class="token operator">:</span> <span class="token string">'US'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> crawler <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Apify<span class="token punctuation">.</span>CheerioCrawler</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  proxyConfiguration<span class="token punctuation">,</span>
+  <span class="token function-variable function">handlePageFunction</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> proxyInfo <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> usedProxyUrl <span class="token operator">=</span> proxyInfo<span class="token punctuation">.</span>url<span class="token punctuation">;</span> <span class="token comment">// Getting the proxy URL</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre>
+<p>For compatibility with existing Actor Input UI (Input Schema), this function returns <code>undefined</code> when the following object is passed as
+<code>proxyConfigurationOptions</code>.</p>
+<pre><code class="hljs"><span class="token punctuation">{</span> useApifyProxy<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span>
+</code></pre>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>[proxyConfigurationOptions]</code></strong>: <a href="../typedefs/proxy-configuration-options"><code>ProxyConfigurationOptions</code></a></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../api/proxy-configuration"><code>Promise&lt;(ProxyConfiguration|undefined)&gt;</code></a></p>
+<hr>
+<p><a name="events"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifyevents"></a><a href="#apifyevents" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.events</code></h2>
+<p>Gets an instance of a Node.js' <a href="https://nodejs.org/api/events.html#events_class_eventemitter" target="_blank" rel="noopener">EventEmitter</a> class that emits various events from the
+SDK or the Apify platform. The event emitter is initialized by calling the <a href="../api/apify#main"><code>Apify.main()</code></a> function.</p>
+<p><strong>Example usage:</strong></p>
+<pre><code class="hljs css language-javascript">Apify<span class="token punctuation">.</span>events<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'cpuInfo'</span><span class="token punctuation">,</span> <span class="token parameter">data</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span>isCpuOverloaded<span class="token punctuation">)</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Oh no, the CPU is overloaded!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>The following events are emitted:</p>
+<ul>
+<li><code>cpuInfo</code>: <code>{ &quot;isCpuOverloaded&quot;: Boolean }</code> The event is emitted approximately every second and it indicates whether the actor is using the
+maximum of available CPU resources. If that's the case, the actor should not add more workload. For example, this event is used by the
+<a href="../api/autoscaled-pool"><code>AutoscaledPool</code></a> class.</li>
+<li><code>migrating</code>: <code>void</code> Emitted when the actor running on the Apify platform is going to be migrated to another worker server soon. You can use it to
+persist the state of the actor and abort the run, to speed up migration. For example, this is used by the <a href="../api/request-list"><code>RequestList</code></a>
+class.</li>
+<li><code>persistState</code>: <code>{ &quot;isMigrating&quot;: Boolean }</code> Emitted in regular intervals (by default 60 seconds) to notify all components of Apify SDK that it is
+time to persist their state, in order to avoid repeating all work when the actor restarts. This event is automatically emitted together with the
+<code>migrating</code> event, in which case the <code>isMigrating</code> flag is set to <code>true</code>. Otherwise the flag is <code>false</code>. Note that the <code>persistState</code> event is
+provided merely for user convenience, you can achieve the same effect using <code>setInterval()</code> and listening for the <code>migrating</code> event.</li>
+</ul>
+<hr>
+<p><a name="getenv"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifygetenv"></a><a href="#apifygetenv" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.getEnv()</code></h2>
+<p>Returns a new <a href="../typedefs/apify-env"><code>ApifyEnv</code></a> object which contains information parsed from all the <code>APIFY_XXX</code> environment variables.</p>
+<p>For the list of the <code>APIFY_XXX</code> environment variables, see <a href="https://docs.apify.com/actor/run#environment-variables" target="_blank" rel="noopener">Actor documentation</a>. If some of
+the variables are not defined or are invalid, the corresponding value in the resulting object will be null.</p>
+<p><strong>Returns</strong>:</p>
+<p><a href="../typedefs/apify-env"><code>ApifyEnv</code></a></p>
+<hr>
+<p><a name="getinput"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifygetinput"></a><a href="#apifygetinput" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.getInput()</code></h2>
+<p>Gets the actor input value from the default <a href="../api/key-value-store"><code>KeyValueStore</code></a> associated with the current actor run.</p>
+<p>This is just a convenient shortcut for <a href="key-value-store#getvalue"><code>keyValueStore.getValue('INPUT')</code></a>. For example, calling the following code:</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> input <span class="token operator">=</span> <span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">getInput</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>is equivalent to:</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">openKeyValueStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">await</span> store<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token string">'INPUT'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Note that the <code>getInput()</code> function does not cache the value read from the key-value store. If you need to use the input multiple times in your actor,
+it is far more efficient to read it once and store it locally.</p>
+<p>For more information, see <a href="../api/apify#openkeyvaluestore"><code>Apify.openKeyValueStore()</code></a> and
+<a href="../api/key-value-store#getvalue"><code>KeyValueStore.getValue()</code></a>.</p>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;(Object&lt;string, *&gt;|string|Buffer|null)&gt;</code> - Returns a promise that resolves to an object, string or
+<a href="https://nodejs.org/api/buffer.html" target="_blank" rel="noopener"><code>Buffer</code></a>, depending on the MIME content type of the record, or <code>null</code> if the record is missing.</p>
+<hr>
+<p><a name="getmemoryinfo"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifygetmemoryinfo"></a><a href="#apifygetmemoryinfo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.getMemoryInfo()</code></h2>
+<p>Returns memory statistics of the process and the system, see <a href="../typedefs/memory-info"><code>MemoryInfo</code></a>.</p>
+<p>If the process runs inside of Docker, the <code>getMemoryInfo</code> gets container memory limits, otherwise it gets system memory limits.</p>
+<p>Beware that the function is quite inefficient because it spawns a new process. Therefore you shouldn't call it too often, like more than once per
+second.</p>
+<p><strong>Returns</strong>:</p>
+<p><a href="../typedefs/memory-info"><code>Promise&lt;MemoryInfo&gt;</code></a></p>
+<hr>
+<p><a name="getvalue"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifygetvaluekey"></a><a href="#apifygetvaluekey" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.getValue(key)</code></h2>
+<p>Gets a value from the default <a href="../api/key-value-store"><code>KeyValueStore</code></a> associated with the current actor run.</p>
+<p>This is just a convenient shortcut for <a href="../api/key-value-store#getvalue"><code>KeyValueStore.getValue()</code></a>. For example, calling the following code:</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token string">'my-key'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>is equivalent to:</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">openKeyValueStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token keyword">await</span> store<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token string">'my-key'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>To store the value to the default key-value store, you can use the <a href="../api/apify#setvalue"><code>Apify.setValue()</code></a> function.</p>
+<p>For more information, see <a href="../api/apify#openkeyvaluestore"><code>Apify.openKeyValueStore()</code></a> and
+<a href="../api/key-value-store#getvalue"><code>KeyValueStore.getValue()</code></a>.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>key</code></strong>: <code>string</code> - Unique record key.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;(Object&lt;string, *&gt;|string|Buffer|null)&gt;</code> - Returns a promise that resolves to an object, string or
+<a href="https://nodejs.org/api/buffer.html" target="_blank" rel="noopener"><code>Buffer</code></a>, depending on the MIME content type of the record, or <code>null</code> if the record is missing.</p>
+<hr>
+<p><a name="isathome"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifyisathome"></a><a href="#apifyisathome" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.isAtHome()</code></h2>
+<p>Returns <code>true</code> when code is running on Apify platform and <code>false</code> otherwise (for example locally).</p>
+<p><strong>Returns</strong>:</p>
+<p><code>boolean</code></p>
+<hr>
+<p><a name="launchplaywright"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifylaunchplaywrightlaunchcontext"></a><a href="#apifylaunchplaywrightlaunchcontext" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.launchPlaywright([launchContext])</code></h2>
+<p>Launches headless browsers using Playwright pre-configured to work within the Apify platform. The function has the same return value as
+<code>browserType.launch()</code>. See <a href="https://playwright.dev/docs/api/class-browsertype" target="_blank"> Playwright documentation</a> for more
+details.</p>
+<p>The <code>launchPlaywright()</code> function alters the following Playwright options:</p>
+<ul>
+<li>Passes the setting from the <code>APIFY_HEADLESS</code> environment variable to the <code>headless</code> option, unless it was already defined by the caller or
+<code>APIFY_XVFB</code> environment variable is set to <code>1</code>. Note that Apify Actor cloud platform automatically sets <code>APIFY_HEADLESS=1</code> to all running actors.</li>
+<li>Takes the <code>proxyUrl</code> option, validates it and adds it to <code>launchOptions</code> in a proper format. The proxy URL must define a port number and have one
+of the following schemes: <code>http://</code>, <code>https://</code>, <code>socks4://</code> or <code>socks5://</code>. If the proxy is HTTP (i.e. has the <code>http://</code> scheme) and contains
+username or password, the <code>launchPlaywright</code> functions sets up an anonymous proxy HTTP to make the proxy work with headless Chrome. For more
+information, read the
+<a href="https://blog.apify.com/how-to-make-headless-chrome-and-puppeteer-use-a-proxy-server-with-authentication-249a21a79212"
+target="_blank">blog post about proxy-chain library</a>.</li>
+</ul>
+<p>To use this function, you need to have the <a href="https://www.npmjs.com/package/playwright" target="_blank" rel="noopener">Playwright</a> NPM package installed in your project. When running
+on the Apify Platform, you can achieve that simply by using the <code>apify/actor-node-playwright-*</code> base Docker image for your actor - see
+<a href="https://docs.apify.com/actor/build#base-images" target="_blank" rel="noopener">Apify Actor documentation</a> for details.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>[launchContext]</code></strong>: <a href="../typedefs/playwright-launch-context"><code>PlaywrightLaunchContext</code></a> - Optional settings passed to <code>browserType.launch()</code>. In
+addition to <a href="https://playwright.dev/docs/api/class-browsertype?_highlight=launch#browsertypelaunchoptions" target="_blank" rel="noopener">Playwright's options</a> the object may
+contain our own <a href="../typedefs/playwright-launch-context"><code>PlaywrightLaunchContext</code></a> that enable additional features.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;*&gt;</code> - Promise that resolves to Playwright's <code>Browser</code> instance.</p>
+<hr>
+<p><a name="launchpuppeteer"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifylaunchpuppeteerlaunchcontext"></a><a href="#apifylaunchpuppeteerlaunchcontext" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.launchPuppeteer([launchContext])</code></h2>
+<p>Launches headless Chrome using Puppeteer pre-configured to work within the Apify platform. The function has the same argument and the return value as
+<code>puppeteer.launch()</code>. See <a href="https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions" target="_blank"> Puppeteer
+documentation</a> for more details.</p>
+<p>The <code>launchPuppeteer()</code> function alters the following Puppeteer options:</p>
+<ul>
+<li>Passes the setting from the <code>APIFY_HEADLESS</code> environment variable to the <code>headless</code> option, unless it was already defined by the caller or
+<code>APIFY_XVFB</code> environment variable is set to <code>1</code>. Note that Apify Actor cloud platform automatically sets <code>APIFY_HEADLESS=1</code> to all running actors.</li>
+<li>Takes the <code>proxyUrl</code> option, validates it and adds it to <code>args</code> as <code>--proxy-server=XXX</code>. The proxy URL must define a port number and have one of
+the following schemes: <code>http://</code>, <code>https://</code>, <code>socks4://</code> or <code>socks5://</code>. If the proxy is HTTP (i.e. has the <code>http://</code> scheme) and contains
+username or password, the <code>launchPuppeteer</code> functions sets up an anonymous proxy HTTP to make the proxy work with headless Chrome. For more
+information, read the
+<a href="https://blog.apify.com/how-to-make-headless-chrome-and-puppeteer-use-a-proxy-server-with-authentication-249a21a79212"
+target="_blank">blog post about proxy-chain library</a>.</li>
+</ul>
+<p>To use this function, you need to have the <a href="https://www.npmjs.com/package/puppeteer" target="_blank" rel="noopener">puppeteer</a> NPM package installed in your project. When running on
+the Apify cloud, you can achieve that simply by using the <code>apify/actor-node-chrome</code> base Docker image for your actor - see
+<a href="https://docs.apify.com/actor/build#base-images" target="_blank" rel="noopener">Apify Actor documentation</a> for details.</p>
+<p>For an example of usage, see the <a href="../examples/synchronous-run">Synchronous run Example</a> or the
+<a href="../examples/puppeteer-with-proxy">Puppeteer proxy Example</a></p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>[launchContext]</code></strong>: <a href="../typedefs/puppeteer-launch-context"><code>PuppeteerLaunchContext</code></a> - All <code>PuppeteerLauncher</code> parameters are passed via an
+launchContext object. If you want to pass custom <code>puppeteer.launch(options)</code> options you can use the <code>PuppeteerLaunchContext.launchOptions</code>
+property.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;*&gt;</code> - Promise that resolves to Puppeteer's <code>Browser</code> instance.</p>
+<hr>
+<p><a name="main"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifymainuserfunc"></a><a href="#apifymainuserfunc" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.main(userFunc)</code></h2>
+<p>Runs the main user function that performs the job of the actor and terminates the process when the user function finishes.</p>
+<p><strong>The <code>Apify.main()</code> function is optional</strong> and is provided merely for your convenience. It is mainly useful when you're running your code as an actor
+on the <a href="https://apify.com/actors" target="_blank" rel="noopener">Apify platform</a>. However, if you want to use Apify SDK tools directly inside your existing projects, e.g. running in
+an <a href="https://expressjs.com/" target="_blank" rel="noopener">Express</a> server, on <a href="https://cloud.google.com/functions" target="_blank" rel="noopener">Google Cloud functions</a> or
+<a href="https://aws.amazon.com/lambda/" target="_blank" rel="noopener">AWS Lambda</a>, it's better to avoid it since the function terminates the main process when it finishes!</p>
+<p>The <code>Apify.main()</code> function performs the following actions:</p>
+<ul>
+<li>When running on the Apify platform (i.e. <code>APIFY_IS_AT_HOME</code> environment variable is set), it sets up a connection to listen for
+platform events. For example, to get a notification about an imminent migration to another server. See <a href="../api/apify#events"><code>Apify.events</code></a> for
+details.</li>
+<li>It checks that either <code>APIFY_TOKEN</code> or <code>APIFY_LOCAL_STORAGE_DIR</code> environment variable is defined. If not, the functions sets
+<code>APIFY_LOCAL_STORAGE_DIR</code> to <code>./apify_storage</code> inside the current working directory. This is to simplify running code
+examples.</li>
+<li>It invokes the user function passed as the <code>userFunc</code> parameter.</li>
+<li>If the user function returned a promise, waits for it to resolve.</li>
+<li>If the user function throws an exception or some other error is encountered, prints error details to console so that they are stored to the log.</li>
+<li>Exits the Node.js process, with zero exit code on success and non-zero on errors.</li>
+</ul>
+<p>The user function can be synchronous:</p>
+<pre><code class="hljs css language-javascript">Apify<span class="token punctuation">.</span><span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">// My synchronous function that returns immediately</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hello world from actor!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>If the user function returns a promise, it is considered asynchronous:</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> <span class="token punctuation">{</span> requestAsBrowser <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'some-request-library'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Apify<span class="token punctuation">.</span><span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">// My asynchronous function that returns a promise</span>
+    <span class="token keyword">return</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token string">'http://www.example.com'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">html</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>To simplify your code, you can take advantage of the <code>async</code>/<code>await</code> keywords:</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> request <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'some-request-library'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Apify<span class="token punctuation">.</span><span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">// My asynchronous function</span>
+    <span class="token keyword">const</span> html <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token string">'http://www.example.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>userFunc</code></strong>: <a href="../typedefs/user-func"><code>UserFunc</code></a> - User function to be executed. If it returns a promise, the promise will be awaited. The user
+function is called with no arguments.</li>
+</ul>
+<hr>
+<p><a name="metamorph"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifymetamorphtargetactorid-input-options"></a><a href="#apifymetamorphtargetactorid-input-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.metamorph(targetActorId, [input], [options])</code></h2>
+<p>Transforms this actor run to an actor run of a given actor. The system stops the current container and starts the new container instead. All the
+default storages are preserved and the new input is stored under the <code>INPUT-METAMORPH-1</code> key in the same default key-value store.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>targetActorId</code></strong>: <code>string</code> - Either <code>username/actor-name</code> or actor ID of an actor to which we want to metamorph.</li>
+<li><strong><code>[input]</code></strong>: <code>Object&lt;string, *&gt;</code> - Input for the actor. If it is an object, it will be stringified to JSON and its content type set to
+<code>application/json; charset=utf-8</code>. Otherwise the <code>options.contentType</code> parameter must be provided.</li>
+<li><strong><code>[options]</code></strong>: <code>object</code> - Object with the settings below:
+<ul>
+<li><strong><code>[contentType]</code></strong>: <code>string</code> - Content type for the <code>input</code>. If not specified, <code>input</code> is expected to be an object that will be stringified
+to JSON and content type set to <code>application/json; charset=utf-8</code>. If <code>options.contentType</code> is specified, then <code>input</code> must be a <code>String</code> or
+<code>Buffer</code>.</li>
+<li><strong><code>[build]</code></strong>: <code>string</code> - Tag or number of the target actor build to metamorph into (e.g. <code>beta</code> or <code>1.2.345</code>). If not provided, the run uses
+build tag or number from the default actor run configuration (typically <code>latest</code>).</li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;void&gt;</code></p>
+<hr>
+<p><a name="newclient"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifynewclientoptions"></a><a href="#apifynewclientoptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.newClient([options])</code></h2>
+<p>Returns a new instance of the Apify API client. The <code>ApifyClient</code> class is provided by the
+<a href="https://www.npmjs.com/package/apify-client" target="_blank">apify-client</a> NPM package, and it is automatically configured using the
+<code>APIFY_API_BASE_URL</code>, and <code>APIFY_TOKEN</code> environment variables. You can override the token via the available options. That's useful if you want to use
+the client as a different Apify user than the SDK internals are using.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>[options]</code></strong>: <code>object</code>
+<ul>
+<li><strong><code>[token]</code></strong>: <code>string</code></li>
+<li><strong><code>[maxRetries]</code></strong>: <code>string</code></li>
+<li><strong><code>[minDelayBetweenRetriesMillis]</code></strong>: <code>string</code></li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../api/apify"><code>ApifyClient</code></a></p>
+<hr>
+<p><a name="opendataset"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifyopendatasetdatasetidorname-options"></a><a href="#apifyopendatasetdatasetidorname-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.openDataset([datasetIdOrName], [options])</code></h2>
+<p>Opens a dataset and returns a promise resolving to an instance of the <a href="../api/dataset"><code>Dataset</code></a> class.</p>
+<p>Datasets are used to store structured data where each object stored has the same attributes, such as online store products or real estate offers. The
+actual data is stored either on the local filesystem or in the cloud.</p>
+<p>For more details and code examples, see the <a href="../api/dataset"><code>Dataset</code></a> class.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>[datasetIdOrName]</code></strong>: <code>string</code> - ID or name of the dataset to be opened. If <code>null</code> or <code>undefined</code>, the function returns the default dataset
+associated with the actor run.</li>
+<li><strong><code>[options]</code></strong>: <code>Object</code>
+<ul>
+<li><strong><code>[forceCloud]</code></strong>: <code>boolean</code> <code> = false</code> - If set to <code>true</code> then the function uses cloud storage usage even if the
+<code>APIFY_LOCAL_STORAGE_DIR</code> environment variable is set. This way it is possible to combine local and cloud storage.</li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../api/dataset"><code>Promise&lt;Dataset&gt;</code></a></p>
+<hr>
+<p><a name="openkeyvaluestore"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifyopenkeyvaluestorestoreidorname-options"></a><a href="#apifyopenkeyvaluestorestoreidorname-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.openKeyValueStore([storeIdOrName], [options])</code></h2>
+<p>Opens a key-value store and returns a promise resolving to an instance of the <a href="../api/key-value-store"><code>KeyValueStore</code></a> class.</p>
+<p>Key-value stores are used to store records or files, along with their MIME content type. The records are stored and retrieved using a unique key. The
+actual data is stored either on a local filesystem or in the Apify cloud.</p>
+<p>For more details and code examples, see the <a href="../api/key-value-store"><code>KeyValueStore</code></a> class.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>[storeIdOrName]</code></strong>: <code>string</code> - ID or name of the key-value store to be opened. If <code>null</code> or <code>undefined</code>, the function returns the default
+key-value store associated with the actor run.</li>
+<li><strong><code>[options]</code></strong>: <code>object</code>
+<ul>
+<li><strong><code>[forceCloud]</code></strong>: <code>boolean</code> <code> = false</code> - If set to <code>true</code> then the function uses cloud storage usage even if the
+<code>APIFY_LOCAL_STORAGE_DIR</code> environment variable is set. This way it is possible to combine local and cloud storage.</li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../api/key-value-store"><code>Promise&lt;KeyValueStore&gt;</code></a></p>
+<hr>
+<p><a name="openrequestlist"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifyopenrequestlistlistname-sources-options"></a><a href="#apifyopenrequestlistlistname-sources-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.openRequestList(listName, sources, [options])</code></h2>
+<p>Opens a request list and returns a promise resolving to an instance of the <a href="../api/request-list"><code>RequestList</code></a> class that is already initialized.</p>
+<p><a href="../api/request-list"><code>RequestList</code></a> represents a list of URLs to crawl, which is always stored in memory. To enable picking up where left off after a
+process restart, the request list sources are persisted to the key-value store at initialization of the list. Then, while crawling, a small state
+object is regularly persisted to keep track of the crawling status.</p>
+<p>For more details and code examples, see the <a href="../api/request-list"><code>RequestList</code></a> class.</p>
+<p><strong>Example usage:</strong></p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> sources <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'https://www.example.com'</span><span class="token punctuation">,</span> <span class="token string">'https://www.google.com'</span><span class="token punctuation">,</span> <span class="token string">'https://www.bing.com'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> requestList <span class="token operator">=</span> <span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">openRequestList</span><span class="token punctuation">(</span><span class="token string">'my-name'</span><span class="token punctuation">,</span> sources<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><p><strong><code>listName</code></strong>: <code>string</code> | <code>null</code> - Name of the request list to be opened. Setting a name enables the <code>RequestList</code>'s state to be persisted in the
+key-value store. This is useful in case of a restart or migration. Since <code>RequestList</code> is only stored in memory, a restart or migration wipes it
+clean. Setting a name will enable the <code>RequestList</code>'s state to survive those situations and continue where it left off.</p>
+<p>The name will be used as a prefix in key-value store, producing keys such as <code>NAME-REQUEST_LIST_STATE</code> and <code>NAME-REQUEST_LIST_SOURCES</code>.</p>
+<p>If <code>null</code>, the list will not be persisted and will only be stored in memory. Process restart will then cause the list to be crawled again from the
+beginning. We suggest always using a name.</p></li>
+<li><p><strong><code>sources</code></strong>: <a href="../typedefs/request-options"><code>Array&lt;(RequestOptions|Request|string)&gt;</code></a> - An array of sources of URLs for the
+<a href="../api/request-list"><code>RequestList</code></a>. It can be either an array of strings, plain objects that define at least the <code>url</code> property, or an array of
+<a href="../api/request"><code>Request</code></a> instances.</p>
+<p><strong>IMPORTANT:</strong> The <code>sources</code> array will be consumed (left empty) after <a href="../api/request-list"><code>RequestList</code></a> initializes. This is a measure to
+prevent memory leaks in situations when millions of sources are added.</p></li>
+</ul>
+<p>Additionally, the <code>requestsFromUrl</code> property may be used instead of <code>url</code>, which will instruct <a href="../api/request-list"><code>RequestList</code></a> to download the
+source URLs from a given remote location. The URLs will be parsed from the received response. In this case you can limit the URLs using <code>regex</code>
+parameter containing regular expression pattern for URLs to be included.</p>
+<p>For details, see the <a href="../typedefs/request-list-options#sources"><code>RequestListOptions.sources</code></a></p>
+<ul>
+<li><strong><code>[options]</code></strong>: <a href="../typedefs/request-list-options"><code>RequestListOptions</code></a> - The <a href="../api/request-list"><code>RequestList</code></a> options. Note that the
+<code>listName</code> parameter supersedes the <a href="../typedefs/request-list-options#persiststatekey"><code>RequestListOptions.persistStateKey</code></a> and
+<a href="../typedefs/request-list-options#persistrequestskey"><code>RequestListOptions.persistRequestsKey</code></a> options and the <code>sources</code> parameter supersedes the
+<a href="../typedefs/request-list-options#sources"><code>RequestListOptions.sources</code></a> option.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../api/request-list"><code>Promise&lt;RequestList&gt;</code></a></p>
+<hr>
+<p><a name="openrequestqueue"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifyopenrequestqueuequeueidorname-options"></a><a href="#apifyopenrequestqueuequeueidorname-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.openRequestQueue([queueIdOrName], [options])</code></h2>
+<p>Opens a request queue and returns a promise resolving to an instance of the <a href="../api/request-queue"><code>RequestQueue</code></a> class.</p>
+<p><a href="../api/request-queue"><code>RequestQueue</code></a> represents a queue of URLs to crawl, which is stored either on local filesystem or in the cloud. The queue is
+used for deep crawling of websites, where you start with several URLs and then recursively follow links to other pages. The data structure supports
+both breadth-first and depth-first crawling orders.</p>
+<p>For more details and code examples, see the <a href="../api/request-queue"><code>RequestQueue</code></a> class.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>[queueIdOrName]</code></strong>: <code>string</code> - ID or name of the request queue to be opened. If <code>null</code> or <code>undefined</code>, the function returns the default request
+queue associated with the actor run.</li>
+<li><strong><code>[options]</code></strong>: <code>object</code>
+<ul>
+<li><strong><code>[forceCloud]</code></strong>: <code>boolean</code> <code> = false</code> - If set to <code>true</code> then the function uses cloud storage usage even if the
+<code>APIFY_LOCAL_STORAGE_DIR</code> environment variable is set. This way it is possible to combine local and cloud storage.</li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../api/request-queue"><code>Promise&lt;RequestQueue&gt;</code></a></p>
+<hr>
+<p><a name="opensessionpool"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifyopensessionpoolsessionpooloptions"></a><a href="#apifyopensessionpoolsessionpooloptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.openSessionPool(sessionPoolOptions)</code></h2>
+<p>Opens a SessionPool and returns a promise resolving to an instance of the <a href="../api/session-pool"><code>SessionPool</code></a> class that is already initialized.</p>
+<p>For more details and code examples, see the <a href="../api/session-pool"><code>SessionPool</code></a> class.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>sessionPoolOptions</code></strong>: <a href="../typedefs/session-pool-options"><code>SessionPoolOptions</code></a></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../api/session-pool"><code>Promise&lt;SessionPool&gt;</code></a></p>
+<hr>
+<p><a name="pushdata"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifypushdataitem"></a><a href="#apifypushdataitem" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.pushData(item)</code></h2>
+<p>Stores an object or an array of objects to the default <a href="../api/dataset"><code>Dataset</code></a> of the current actor run.</p>
+<p>This is just a convenient shortcut for <a href="../api/dataset#pushdata"><code>Dataset.pushData()</code></a>. For example, calling the following code:</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">pushData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> myValue<span class="token operator">:</span> <span class="token number">123</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>is equivalent to:</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> dataset <span class="token operator">=</span> <span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">openDataset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">await</span> dataset<span class="token punctuation">.</span><span class="token function">pushData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> myValue<span class="token operator">:</span> <span class="token number">123</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>For more information, see <a href="../api/apify#opendataset"><code>Apify.openDataset()</code></a> and <a href="../api/dataset#pushdata"><code>Dataset.pushData()</code></a></p>
+<p><strong>IMPORTANT</strong>: Make sure to use the <code>await</code> keyword when calling <code>pushData()</code>, otherwise the actor process might finish before the data are stored!</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>item</code></strong>: <code>object</code> - Object or array of objects containing data to be stored in the default dataset. The objects must be serializable to JSON
+and the JSON representation of each object must be smaller than 9MB.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;void&gt;</code></p>
+<hr>
+<p><a name="setvalue"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="apifysetvaluekey-value-options"></a><a href="#apifysetvaluekey-value-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Apify.setValue(key, value, [options])</code></h2>
+<p>Stores or deletes a value in the default <a href="../api/key-value-store"><code>KeyValueStore</code></a> associated with the current actor run.</p>
+<p>This is just a convenient shortcut for <a href="../api/key-value-store#setvalue"><code>KeyValueStore.setValue()</code></a>. For example, calling the following code:</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span><span class="token string">'OUTPUT'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> foo<span class="token operator">:</span> <span class="token string">'bar'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>is equivalent to:</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">openKeyValueStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">await</span> store<span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span><span class="token string">'OUTPUT'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> foo<span class="token operator">:</span> <span class="token string">'bar'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>To get a value from the default key-value store, you can use the <a href="../api/apify#getvalue"><code>Apify.getValue()</code></a> function.</p>
+<p>For more information, see <a href="../api/apify#openkeyvaluestore"><code>Apify.openKeyValueStore()</code></a> and
+<a href="../api/key-value-store#getvalue"><code>KeyValueStore.getValue()</code></a>.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>key</code></strong>: <code>string</code> - Unique record key.</li>
+<li><strong><code>value</code></strong>: <code>*</code> - Record data, which can be one of the following values:
+<ul>
+<li>If <code>null</code>, the record in the key-value store is deleted.</li>
+<li>If no <code>options.contentType</code> is specified, <code>value</code> can be any JavaScript object and it will be stringified to JSON.</li>
+<li>If <code>options.contentType</code> is set, <code>value</code> is taken as is and it must be a <code>String</code> or <a href="https://nodejs.org/api/buffer.html" target="_blank" rel="noopener"><code>Buffer</code></a>. For any
+other value an error will be thrown.</li>
+</ul></li>
+<li><strong><code>[options]</code></strong>: <code>object</code>
+<ul>
+<li><strong><code>[contentType]</code></strong>: <code>string</code> - Specifies a custom MIME content type of the record.</li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;void&gt;</code></p>
+<hr>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/1.3.1/examples/use-stealth-mode"><span class="arrow-prev">← </span><span>Use stealth mode</span></a><a class="docs-next button" href="/docs/1.3.1/api/configuration"><span>Configuration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#apify-class"><code>Apify</code> Class</a></li><li><a href="#apifyaddwebhookoptions"><code>Apify.addWebhook(options)</code></a></li><li><a href="#apifycallactid-input-options"><code>Apify.call(actId, [input], [options])</code></a></li><li><a href="#apifycalltasktaskid-input-options"><code>Apify.callTask(taskId, [input], [options])</code></a></li><li><a href="#apifycreateproxyconfigurationproxyconfigurationoptions"><code>Apify.createProxyConfiguration([proxyConfigurationOptions])</code></a></li><li><a href="#apifyevents"><code>Apify.events</code></a></li><li><a href="#apifygetenv"><code>Apify.getEnv()</code></a></li><li><a href="#apifygetinput"><code>Apify.getInput()</code></a></li><li><a href="#apifygetmemoryinfo"><code>Apify.getMemoryInfo()</code></a></li><li><a href="#apifygetvaluekey"><code>Apify.getValue(key)</code></a></li><li><a href="#apifyisathome"><code>Apify.isAtHome()</code></a></li><li><a href="#apifylaunchplaywrightlaunchcontext"><code>Apify.launchPlaywright([launchContext])</code></a></li><li><a href="#apifylaunchpuppeteerlaunchcontext"><code>Apify.launchPuppeteer([launchContext])</code></a></li><li><a href="#apifymainuserfunc"><code>Apify.main(userFunc)</code></a></li><li><a href="#apifymetamorphtargetactorid-input-options"><code>Apify.metamorph(targetActorId, [input], [options])</code></a></li><li><a href="#apifynewclientoptions"><code>Apify.newClient([options])</code></a></li><li><a href="#apifyopendatasetdatasetidorname-options"><code>Apify.openDataset([datasetIdOrName], [options])</code></a></li><li><a href="#apifyopenkeyvaluestorestoreidorname-options"><code>Apify.openKeyValueStore([storeIdOrName], [options])</code></a></li><li><a href="#apifyopenrequestlistlistname-sources-options"><code>Apify.openRequestList(listName, sources, [options])</code></a></li><li><a href="#apifyopenrequestqueuequeueidorname-options"><code>Apify.openRequestQueue([queueIdOrName], [options])</code></a></li><li><a href="#apifyopensessionpoolsessionpooloptions"><code>Apify.openSessionPool(sessionPoolOptions)</code></a></li><li><a href="#apifypushdataitem"><code>Apify.pushData(item)</code></a></li><li><a href="#apifysetvaluekey-value-options"><code>Apify.setValue(key, value, [options])</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/apify_logo.svg" alt="Apify SDK" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/guides/motivation">Guide</a><a href="/docs/examples/crawl-multiple-urls">Examples</a><a href="/docs/api/apify">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/apify" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/apify" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://www.facebook.com/apifytech" target="_blank" rel="noreferrer noopener">Facebook</a></div><div><h5>More</h5><a href="https://apify.com" target="_blank">Apify Cloud</a><a href="https://docusaurus.io" target="_blank">Docusaurus</a><a href="https://github.com/apify/apify-js" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2021 Apify Technologies s.r.o.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '64ce2544769e34add0e6402688c86e92',
+                indexName: 'apify_sdk',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["version:1.3.1"]}
+              });
+            </script></body></html>

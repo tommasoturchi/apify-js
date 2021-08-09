@@ -83,7 +83,7 @@ will automatically encode all the URLs before accessing them.</p>
 <pre><code class="hljs">preNavigationHooks<span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token punctuation">(</span><span class="token parameter">crawlingContext<span class="token punctuation">,</span> requestAsBrowserOptions</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
         requestAsBrowserOptions<span class="token punctuation">.</span>forceUrlEncoding <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span>
 </code></pre>
 <p>By default, <code>CheerioCrawler</code> only processes web pages with the <code>text/html</code> and <code>application/xhtml+xml</code> MIME content types (as reported by the

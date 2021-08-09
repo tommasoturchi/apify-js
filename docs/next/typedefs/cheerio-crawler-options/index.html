@@ -207,7 +207,7 @@ crawler calls to navigate. Example:</p>
 <pre><code class="hljs">preNavigationHooks<span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">crawlingContext<span class="token punctuation">,</span> requestAsBrowserOptions</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
         requestAsBrowserOptions<span class="token punctuation">.</span>forceUrlEncoding <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span>
 </code></pre>
 <hr>
@@ -218,7 +218,7 @@ crawler calls to navigate. Example:</p>
 <pre><code class="hljs">postNavigationHooks<span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">crawlingContext</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
         <span class="token comment">// ...</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span>
 </code></pre>
 <hr>
