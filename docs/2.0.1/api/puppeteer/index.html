@@ -1,0 +1,426 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>utils.puppeteer · Apify SDK</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;a name=&quot;puppeteer&quot;&gt;&lt;/a&gt;"/><meta name="docsearch:version" content="2.0.1"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="utils.puppeteer · Apify SDK"/><meta property="og:type" content="website"/><meta property="og:url" content="https://sdk.apify.com/"/><meta property="og:description" content="&lt;a name=&quot;puppeteer&quot;&gt;&lt;/a&gt;"/><meta property="og:image" content="https://sdk.apify.com/img/apify_og_SDK.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://sdk.apify.com/img/apify_og_SDK.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/apify_logo.svg" alt="Apify SDK"/><h2 class="headerTitleWithLogo">Apify SDK</h2></a><a href="/versions"><h3>2.0.1</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class="siteNavGroupActive"><a href="/docs/2.0.1/guides/motivation" target="_self">Guide</a></li><li class="siteNavGroupActive"><a href="/docs/2.0.1/examples/crawl-multiple-urls" target="_self">Examples</a></li><li class="siteNavGroupActive"><a href="/docs/2.0.1/api/apify" target="_self">API Reference</a></li><li class=""><a href="https://github.com/apify/apify-js" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Utilities</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Guide<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/2.0.1/guides/motivation">Motivation</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/guides/quick-start">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/guides/apify-platform">Apify Platform</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/guides/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/guides/request-storage">Request Storage</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/guides/result-storage">Result Storage</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/guides/environment-variables">Environment Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/guides/proxy-management">Proxy Management</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/guides/session-management">Session Management</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/guides/type-script-actor">TypeScript Actors</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/guides/docker-images">Running in Docker</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/guides/migration-to-v1">Migration to version 1</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Examples<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/accept-user-input">Accept user input</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/add-data-to-dataset">Add data to dataset</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/basic-crawler">Basic crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/call-actor">Call actor</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/capture-screenshot">Capture a screenshot</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/cheerio-crawler">Cheerio crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/crawl-all-links">Crawl all links on a website</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/crawl-multiple-urls">Crawl multiple URLs</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/crawl-relative-links">Crawl a website with relative links</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/crawl-single-url">Crawl a single URL</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/crawl-sitemap">Crawl a sitemap</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/crawl-some-links">Crawl some links on a website</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/forms">Forms</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/map-and-reduce">Dataset Map and Reduce methods</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/playwright-crawler">Playwright crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/puppeteer-crawler">Puppeteer crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/puppeteer-recursive-crawl">Puppeteer recursive crawl</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/puppeteer-with-proxy">Puppeteer with proxy</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/synchronous-run">Synchronous run</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/examples/use-stealth-mode">Use stealth mode</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/apify">Apify</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/configuration">Configuration</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Crawlers</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/basic-crawler">BasicCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/cheerio-crawler">CheerioCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/playwright-crawler">PlaywrightCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/puppeteer-crawler">PuppeteerCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/statistics">Statistics</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Result Stores</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/dataset">Dataset</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/key-value-store">KeyValueStore</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Scaling</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/autoscaled-pool">AutoscaledPool</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/session">Session</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/session-pool">SessionPool</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/proxy-configuration">ProxyConfiguration</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/snapshotter">Snapshotter</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/system-status">SystemStatus</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Sources</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/request">Request</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/request-list">RequestList</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/request-queue">RequestQueue</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/pseudo-url">PseudoUrl</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Utilities</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/utils">utils</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/log">utils.log</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/playwright">utils.playwright</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/2.0.1/api/puppeteer">utils.puppeteer</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/social">utils.social</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Type Definitions<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Constructor Options</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/autoscaled-pool-options">AutoscaledPoolOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/basic-crawler-options">BasicCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/cheerio-crawler-options">CheerioCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/playwright-crawler-options">PlaywrightCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/playwright-launch-context">PlaywrightLaunchContext</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/puppeteer-crawler-options">PuppeteerCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/puppeteer-launch-context">PuppeteerLaunchContext</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/proxy-configuration-options">ProxyConfigurationOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/proxy-info">ProxyInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/logger-options">LoggerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/request-options">RequestOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/request-list-options">RequestListOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/request-as-browser-options">RequestAsBrowserOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/session-options">SessionOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/session-pool-options">SessionPoolOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/snapshotter-options">SnapshotterOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/stealth-options">StealthOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/system-status-options">SystemStatusOptions</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Crawlers</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/cheerio-handle-page">CheerioHandlePage</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/cheerio-handle-page-inputs">CheerioHandlePageInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/handle-failed-request">HandleFailedRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/handle-failed-request-input">HandleFailedRequestInput</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/handle-request">HandleRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/handle-request-inputs">HandleRequestInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/prepare-request">PrepareRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/prepare-request-inputs">PrepareRequestInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/puppeteer-handle-page">PuppeteerHandlePage</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/puppeteer-handle-page-inputs">PuppeteerHandlePageInputs</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Dataset</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/dataset-consumer">DatasetConsumer</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/dataset-mapper">DatasetMapper</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/dataset-reducer">DatasetReducer</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - KeyValueStore</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/key-consumer">KeyConsumer</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Sessions</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/create-session">CreateSession</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Utilities</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/request-transform">RequestTransform</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Return Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/actor-run">ActorRun</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/api/apify-call-error">ApifyCallError</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/apify-env">ApifyEnv</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/dataset-content">DatasetContent</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/memory-info">MemoryInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/queue-operation-info">QueueOperationInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/request-list-state">RequestListState</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/session-state">SessionState</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/social-handles">SocialHandles</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.1/typedefs/system-info">SystemInfo</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">utils.puppeteer</h1></header><article><div><span><p><a name="puppeteer"></a></p>
+<p>A namespace that contains various utilities for <a href="https://github.com/puppeteer/puppeteer" target="_blank" rel="noopener">Puppeteer</a> - the headless Chrome Node API.</p>
+<p><strong>Example usage:</strong></p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> Apify <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'apify'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> puppeteer <span class="token punctuation">}</span> <span class="token operator">=</span> Apify<span class="token punctuation">.</span>utils<span class="token punctuation">;</span>
+
+<span class="token comment">// Open https://www.example.com in Puppeteer</span>
+<span class="token keyword">const</span> browser <span class="token operator">=</span> <span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">launchPuppeteer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> page <span class="token operator">=</span> <span class="token keyword">await</span> browser<span class="token punctuation">.</span><span class="token function">newPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">await</span> page<span class="token punctuation">.</span><span class="token function">goto</span><span class="token punctuation">(</span><span class="token string">'https://www.example.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Inject jQuery into a page</span>
+<span class="token keyword">await</span> puppeteer<span class="token punctuation">.</span><span class="token function">injectJQuery</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<hr>
+<p><a name="addinterceptrequesthandler"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="puppeteeraddinterceptrequesthandler"></a><a href="#puppeteeraddinterceptrequesthandler" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>puppeteer.addInterceptRequestHandler</code></h2>
+<p>Adds request interception handler in similar to <code>page.on('request', handler);</code> but in addition to that supports multiple parallel handlers.</p>
+<p>All the handlers are executed sequentially in the order as they were added. Each of the handlers must call one of <code>request.continue()</code>,
+<code>request.abort()</code> and <code>request.respond()</code>. In addition to that any of the handlers may modify the request object (method, postData, headers) by
+passing its overrides to <code>request.continue()</code>. If multiple handlers modify same property then the last one wins. Headers are merged separately so you
+can override only a value of specific header.</p>
+<p>If one the handlers calls <code>request.abort()</code> or <code>request.respond()</code> then request is not propagated further to any of the remaining handlers.</p>
+<p><strong>Example usage:</strong></p>
+<pre><code class="hljs css language-javascript"><span class="token comment">// Replace images with placeholder.</span>
+<span class="token keyword">await</span> <span class="token function">addInterceptRequestHandler</span><span class="token punctuation">(</span>page<span class="token punctuation">,</span> <span class="token parameter">request</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>request<span class="token punctuation">.</span><span class="token function">resourceType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'image'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">respond</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            statusCode<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+            contentType<span class="token operator">:</span> <span class="token string">'image/jpeg'</span><span class="token punctuation">,</span>
+            body<span class="token operator">:</span> placeholderImageBuffer<span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">continue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Abort all the scripts.</span>
+<span class="token keyword">await</span> <span class="token function">addInterceptRequestHandler</span><span class="token punctuation">(</span>page<span class="token punctuation">,</span> <span class="token parameter">request</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>request<span class="token punctuation">.</span><span class="token function">resourceType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'script'</span><span class="token punctuation">)</span> <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">continue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Change requests to post.</span>
+<span class="token keyword">await</span> <span class="token function">addInterceptRequestHandler</span><span class="token punctuation">(</span>page<span class="token punctuation">,</span> <span class="token parameter">request</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">continue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        method<span class="token operator">:</span> <span class="token string">'POST'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">await</span> page<span class="token punctuation">.</span><span class="token function">goto</span><span class="token punctuation">(</span><span class="token string">'http://example.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>page</code></strong>: <code>Page</code> - Puppeteer <a href="https://pptr.dev/#?product=Puppeteer&amp;show=api-class-page" target="_blank" rel="noopener"><code>Page</code></a> object.</li>
+<li><strong><code>handler</code></strong>: <a href="../typedefs/intercept-handler"><code>InterceptHandler</code></a> - Request interception handler.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;void&gt;</code></p>
+<hr>
+<p><a name="removeinterceptrequesthandler"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="puppeteerremoveinterceptrequesthandler"></a><a href="#puppeteerremoveinterceptrequesthandler" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>puppeteer.removeInterceptRequestHandler</code></h2>
+<p>Removes request interception handler for given page.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>page</code></strong>: <code>Page</code> - Puppeteer <a href="https://pptr.dev/#?product=Puppeteer&amp;show=api-class-page" target="_blank" rel="noopener"><code>Page</code></a> object.</li>
+<li><strong><code>handler</code></strong>: <a href="../typedefs/intercept-handler"><code>InterceptHandler</code></a> - Request interception handler.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;void&gt;</code></p>
+<hr>
+<p><a name="gotoextended"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="puppeteergotoextended"></a><a href="#puppeteergotoextended" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>puppeteer.gotoExtended</code></h2>
+<p>Extended version of Puppeteer's <code>page.goto()</code> allowing to perform requests with HTTP method other than GET, with custom headers and POST payload. URL,
+method, headers and payload are taken from request parameter that must be an instance of Apify.Request class.</p>
+<p><em>NOTE:</em> In recent versions of Puppeteer using requests other than GET, overriding headers and adding payloads disables browser cache which degrades
+performance.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>page</code></strong>: <code>Page</code> - Puppeteer <a href="https://pptr.dev/#?product=Puppeteer&amp;show=api-class-page" target="_blank" rel="noopener"><code>Page</code></a> object.</li>
+<li><strong><code>request</code></strong>: <a href="../api/request"><code>Request</code></a></li>
+<li><strong><code>[gotoOptions]</code></strong>: <a href="../typedefs/direct-navigation-options"><code>DirectNavigationOptions</code></a> - Custom options for <code>page.goto()</code>.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;(Response|null)&gt;</code></p>
+<hr>
+<p><a name="infinitescroll"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="puppeteerinfinitescroll"></a><a href="#puppeteerinfinitescroll" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>puppeteer.infiniteScroll</code></h2>
+<p>Scrolls to the bottom of a page, or until it times out. Loads dynamic content when it hits the bottom of a page, and then continues scrolling.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>page</code></strong>: <code>Page</code> - Puppeteer <a href="https://pptr.dev/#?product=Puppeteer&amp;show=api-class-page" target="_blank" rel="noopener"><code>Page</code></a> object.</li>
+<li><strong><code>[options]</code></strong>: <code>object</code>
+<ul>
+<li><strong><code>[timeoutSecs]</code></strong>: <code>number</code> <code> = 0</code> - How many seconds to scroll for. If 0, will scroll until bottom of page.</li>
+<li><strong><code>[waitForSecs]</code></strong>: <code>number</code> <code> = 4</code> - How many seconds to wait for no new content to load before exit.</li>
+<li><strong><code>[scrollDownAndUp]</code></strong>: <code>boolean</code> <code> = false</code> - If true, it will scroll up a bit after each scroll down. This is required on some
+websites for the scroll to work.</li>
+<li><strong><code>[buttonSelector]</code></strong>: <code>string</code> - Optionally checks and clicks a button if it appears while scrolling. This is required on some websites for
+the scroll to work.</li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;void&gt;</code></p>
+<hr>
+<p><a name="savesnapshot"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="puppeteersavesnapshot"></a><a href="#puppeteersavesnapshot" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>puppeteer.saveSnapshot</code></h2>
+<p>Saves a full screenshot and HTML of the current page into a Key-Value store.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>page</code></strong>: <code>Page</code> - Puppeteer <a href="https://pptr.dev/#?product=Puppeteer&amp;show=api-class-page" target="_blank" rel="noopener"><code>Page</code></a> object.</li>
+<li><strong><code>[options]</code></strong>: <code>object</code>
+<ul>
+<li><strong><code>[key]</code></strong>: <code>string</code> <code> = &quot;SNAPSHOT&quot;</code> - Key under which the screenshot and HTML will be saved. <code>.jpg</code> will be appended
+for screenshot and <code>.html</code> for HTML.</li>
+<li><strong><code>[screenshotQuality]</code></strong>: <code>number</code> <code> = 50</code> - The quality of the image, between 0-100. Higher quality images have bigger size and
+require more storage.</li>
+<li><strong><code>[saveScreenshot]</code></strong>: <code>boolean</code> <code> = true</code> - If true, it will save a full screenshot of the current page as a record with <code>key</code>
+appended by <code>.jpg</code>.</li>
+<li><strong><code>[saveHtml]</code></strong>: <code>boolean</code> <code> = true</code> - If true, it will save a full HTML of the current page as a record with <code>key</code> appended by
+<code>.html</code>.</li>
+<li><strong><code>[keyValueStoreName]</code></strong>: <code>string</code> | <code>null</code> <code> = null</code> - Name or id of the Key-Value store where snapshot is saved. By default it
+is saved to default Key-Value store.</li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;void&gt;</code></p>
+<hr>
+<p><a name="enqueuelinksbyclickingelements"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="puppeteerenqueuelinksbyclickingelementsoptions"></a><a href="#puppeteerenqueuelinksbyclickingelementsoptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>puppeteer.enqueueLinksByClickingElements(options)</code></h2>
+<p>The function finds elements matching a specific CSS selector in a Puppeteer page, clicks all those elements using a mouse move and a left mouse button
+click and intercepts all the navigation requests that are subsequently produced by the page. The intercepted requests, including their methods,
+headers and payloads are then enqueued to a provided <a href="../api/request-queue"><code>RequestQueue</code></a>. This is useful to crawl JavaScript heavy pages where
+links are not available in <code>href</code> elements, but rather navigations are triggered in click handlers. If you're looking to find URLs in <code>href</code>
+attributes of the page, see <a href="../api/utils#enqueuelinks"><code>utils.enqueueLinks()</code></a>.</p>
+<p>Optionally, the function allows you to filter the target links' URLs using an array of <a href="../api/pseudo-url"><code>PseudoUrl</code></a> objects and override settings
+of the enqueued <a href="../api/request"><code>Request</code></a> objects.</p>
+<p><strong>IMPORTANT</strong>: To be able to do this, this function uses various mutations on the page, such as changing the Z-index of elements being clicked and
+their visibility. Therefore, it is recommended to only use this function as the last operation in the page.</p>
+<p><strong>USING HEADFUL BROWSER</strong>: When using a headful browser, this function will only be able to click elements in the focused tab, effectively limiting
+concurrency to 1. In headless mode, full concurrency can be achieved.</p>
+<p><strong>PERFORMANCE</strong>: Clicking elements with a mouse and intercepting requests is not a low level operation that takes nanoseconds. It's not very CPU
+intensive, but it takes time. We strongly recommend limiting the scope of the clicking as much as possible by using a specific selector that targets
+only the elements that you assume or know will produce a navigation. You can certainly click everything by using the <code>*</code> selector, but be prepared to
+wait minutes to get results on a large and complex page.</p>
+<p><strong>Example usage</strong></p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">await</span> Apify<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>puppeteer<span class="token punctuation">.</span><span class="token function">enqueueLinksByClickingElements</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  page<span class="token punctuation">,</span>
+  requestQueue<span class="token punctuation">,</span>
+  selector<span class="token operator">:</span> <span class="token string">'a.product-detail'</span><span class="token punctuation">,</span>
+  pseudoUrls<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">'https://www.example.com/handbags/[.*]'</span>
+      <span class="token string">'https://www.example.com/purses/[.*]'</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><p><strong><code>options</code></strong>: <code>object</code> - All <code>enqueueLinksByClickingElements()</code> parameters are passed via an options object with the following keys:</p>
+<ul>
+<li><strong><code>page</code></strong>: <code>Page</code> - Puppeteer <a href="https://pptr.dev/#?product=Puppeteer&amp;show=api-class-page" target="_blank" rel="noopener"><code>Page</code></a> object.</li>
+<li><strong><code>requestQueue</code></strong>: <a href="../api/request-queue"><code>RequestQueue</code></a> - A request queue to which the URLs will be enqueued.</li>
+<li><strong><code>selector</code></strong>: <code>string</code> - A CSS selector matching elements to be clicked on. Unlike in <a href="../api/utils#enqueuelinks"><code>utils.enqueueLinks()</code></a>,
+there is no default value. This is to prevent suboptimal use of this function by using it too broadly.</li>
+<li><strong><code>[pseudoUrls]</code></strong>: <code>Array&lt;(string|RegExp|Object&lt;string, *&gt;)&gt;</code> - An array of <a href="../api/pseudo-url"><code>PseudoUrl</code></a>s matching the URLs to be
+enqueued, or an array of strings or RegExps or plain Objects from which the <a href="../api/pseudo-url"><code>PseudoUrl</code></a>s can be constructed.</li>
+</ul>
+<p>The plain objects must include at least the <code>purl</code> property, which holds the pseudo-URL string or RegExp. All remaining keys will be used as the
+<code>requestTemplate</code> argument of the <a href="../api/pseudo-url"><code>PseudoUrl</code></a> constructor, which lets you specify special properties for the enqueued
+<a href="../api/request"><code>Request</code></a> objects.</p>
+<p>If <code>pseudoUrls</code> is an empty array, <code>null</code> or <code>undefined</code>, then the function enqueues all links found on the page.</p>
+<ul>
+<li><strong><code>[transformRequestFunction]</code></strong>: <a href="../typedefs/request-transform"><code>RequestTransform</code></a> - Just before a new <a href="../api/request"><code>Request</code></a> is
+constructed and enqueued to the <a href="../api/request-queue"><code>RequestQueue</code></a>, this function can be used to remove it or modify its contents such as
+<code>userData</code>, <code>payload</code> or, most importantly <code>uniqueKey</code>. This is useful when you need to enqueue multiple <code>Requests</code> to the queue that share
+the same URL, but differ in methods or payloads, or to dynamically update or create <code>userData</code>.</li>
+</ul>
+<p>For example: by adding <code>useExtendedUniqueKey: true</code> to the <code>request</code> object, <code>uniqueKey</code> will be computed from a combination of <code>url</code>, <code>method</code>
+and <code>payload</code> which enables crawling of websites that navigate using form submits (POST requests).</p>
+<p><strong>Example:</strong></p>
+<pre><code class="hljs css language-javascript"><span class="token punctuation">{</span>
+    <span class="token function-variable function">transformRequestFunction</span><span class="token operator">:</span> <span class="token parameter">request</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        request<span class="token punctuation">.</span>userData<span class="token punctuation">.</span>foo <span class="token operator">=</span> <span class="token string">'bar'</span><span class="token punctuation">;</span>
+        request<span class="token punctuation">.</span>useExtendedUniqueKey <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> request<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li><strong><code>[waitForPageIdleSecs]</code></strong>: <code>number</code> <code> = 1</code> - Clicking in the page triggers various asynchronous operations that lead to new URLs
+being shown by the browser. It could be a simple JavaScript redirect or opening of a new tab in the browser. These events often happen only
+some time after the actual click. Requests typically take milliseconds while new tabs open in hundreds of milliseconds.</li>
+</ul>
+<p>To be able to capture all those events, the <code>enqueueLinksByClickingElements()</code> function repeatedly waits for the <code>waitForPageIdleSecs</code>. By
+repeatedly we mean that whenever a relevant event is triggered, the timer is restarted. As long as new events keep coming, the function will not
+return, unless the below <code>maxWaitForPageIdleSecs</code> timeout is reached.</p>
+<p>You may want to reduce this for example when you're sure that your clicks do not open new tabs, or increase when you're not getting all the
+expected URLs.</p>
+<ul>
+<li><strong><code>[maxWaitForPageIdleSecs]</code></strong>: <code>number</code> <code> = 5</code> - This is the maximum period for which the function will keep tracking events, even
+if more events keep coming. Its purpose is to prevent a deadlock in the page by periodic events, often unrelated to the clicking itself. See
+<code>waitForPageIdleSecs</code> above for an explanation.</li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../typedefs/queue-operation-info"><code>Promise&lt;Array&lt;QueueOperationInfo&gt;&gt;</code></a> - Promise that resolves to an array of
+<a href="../typedefs/queue-operation-info"><code>QueueOperationInfo</code></a> objects.</p>
+<hr>
+<p><a name="injectfile"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="puppeteerinjectfilepage-filepath-options"></a><a href="#puppeteerinjectfilepage-filepath-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>puppeteer.injectFile(page, filePath, [options])</code></h2>
+<p>Injects a JavaScript file into a Puppeteer page. Unlike Puppeteer's <code>addScriptTag</code> function, this function works on pages with arbitrary Cross-Origin
+Resource Sharing (CORS) policies.</p>
+<p>File contents are cached for up to 10 files to limit file system access.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>page</code></strong>: <code>Page</code> - Puppeteer <a href="https://pptr.dev/#?product=Puppeteer&amp;show=api-class-page" target="_blank" rel="noopener"><code>Page</code></a> object.</li>
+<li><strong><code>filePath</code></strong>: <code>string</code> - File path</li>
+<li><strong><code>[options]</code></strong>: <code>object</code>
+<ul>
+<li><strong><code>[surviveNavigations]</code></strong>: <code>boolean</code> - Enables the injected script to survive page navigations and reloads without need to be re-injected
+manually. This does not mean, however, that internal state will be preserved. Just that it will be automatically re-injected on each
+navigation before any other scripts get the chance to execute.</li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;*&gt;</code></p>
+<hr>
+<p><a name="injectjquery"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="puppeteerinjectjquerypage"></a><a href="#puppeteerinjectjquerypage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>puppeteer.injectJQuery(page)</code></h2>
+<p>Injects the <a href="https://jquery.com/" target="_blank" rel="noopener">jQuery</a> library into a Puppeteer page. jQuery is often useful for various web scraping and crawling tasks. For
+example, it can help extract text from HTML elements using CSS selectors.</p>
+<p>Beware that the injected jQuery object will be set to the <code>window.$</code> variable and thus it might cause conflicts with other libraries included by the
+page that use the same variable name (e.g. another version of jQuery). This can affect functionality of page's scripts.</p>
+<p>The injected jQuery will survive page navigations and reloads.</p>
+<p><strong>Example usage:</strong></p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">await</span> Apify<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>puppeteer<span class="token punctuation">.</span><span class="token function">injectJQuery</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> title <span class="token operator">=</span> <span class="token keyword">await</span> page<span class="token punctuation">.</span><span class="token function">evaluate</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'head title'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Note that <code>injectJQuery()</code> does not affect the Puppeteer's <a href="https://pptr.dev/#?product=Puppeteer&amp;show=api-pageselector" target="_blank" rel="noopener"><code>page.$()</code></a> function in any
+way.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>page</code></strong>: <code>Page</code> - Puppeteer <a href="https://pptr.dev/#?product=Puppeteer&amp;show=api-class-page" target="_blank" rel="noopener"><code>Page</code></a> object.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;*&gt;</code></p>
+<hr>
+<p><a name="injectunderscore"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="puppeteerinjectunderscorepage"></a><a href="#puppeteerinjectunderscorepage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>puppeteer.injectUnderscore(page)</code></h2>
+<p>Injects the <a href="https://underscorejs.org/" target="_blank" rel="noopener">Underscore</a> library into a Puppeteer page.</p>
+<p>Beware that the injected Underscore object will be set to the <code>window._</code> variable and thus it might cause conflicts with libraries included by the
+page that use the same variable name. This can affect functionality of page's scripts.</p>
+<p>The injected Underscore will survive page navigations and reloads.</p>
+<p><strong>Example usage:</strong></p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">await</span> Apify<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>puppeteer<span class="token punctuation">.</span><span class="token function">injectUnderscore</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> escapedHtml <span class="token operator">=</span> <span class="token keyword">await</span> page<span class="token punctuation">.</span><span class="token function">evaluate</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> _<span class="token punctuation">.</span><span class="token function">escape</span><span class="token punctuation">(</span><span class="token string">'&lt;h1>Hello&lt;/h1>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>page</code></strong>: <code>Page</code> - Puppeteer <a href="https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#class-page" target="_blank" rel="noopener">Page</a> object.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;*&gt;</code></p>
+<hr>
+<p><a name="blockrequests"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="puppeteerblockrequestspage-options"></a><a href="#puppeteerblockrequestspage-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>puppeteer.blockRequests(page, [options])</code></h2>
+<p>Forces the Puppeteer browser tab to block loading URLs that match a provided pattern. This is useful to speed up crawling of websites, since it
+reduces the amount of data that needs to be downloaded from the web, but it may break some websites or unexpectedly prevent loading of resources.</p>
+<p>By default, the function will block all URLs including the following patterns:</p>
+<pre><code class="hljs css language-json"><span class="token punctuation">[</span><span class="token string">".css"</span><span class="token punctuation">,</span> <span class="token string">".jpg"</span><span class="token punctuation">,</span> <span class="token string">".jpeg"</span><span class="token punctuation">,</span> <span class="token string">".png"</span><span class="token punctuation">,</span> <span class="token string">".svg"</span><span class="token punctuation">,</span> <span class="token string">".gif"</span><span class="token punctuation">,</span> <span class="token string">".woff"</span><span class="token punctuation">,</span> <span class="token string">".pdf"</span><span class="token punctuation">,</span> <span class="token string">".zip"</span><span class="token punctuation">]</span>
+</code></pre>
+<p>If you want to extend this list further, use the <code>extraUrlPatterns</code> option, which will keep blocking the default patterns, as well as add your custom
+ones. If you would like to block only specific patterns, use the <code>urlPatterns</code> option, which will override the defaults and block only URLs with your
+custom patterns.</p>
+<p>This function does not use Puppeteer's request interception and therefore does not interfere with browser cache. It's also faster than blocking
+requests using interception, because the blocking happens directly in the browser without the round-trip to Node.js, but it does not provide the extra
+benefits of request interception.</p>
+<p>The function will never block main document loads and their respective redirects.</p>
+<p><strong>Example usage</strong></p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> Apify <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'apify'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> browser <span class="token operator">=</span> <span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">launchPuppeteer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> page <span class="token operator">=</span> <span class="token keyword">await</span> browser<span class="token punctuation">.</span><span class="token function">newPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Block all requests to URLs that include `adsbygoogle.js` and also all defaults.</span>
+<span class="token keyword">await</span> Apify<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>puppeteer<span class="token punctuation">.</span><span class="token function">blockRequests</span><span class="token punctuation">(</span>page<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    extraUrlPatterns<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'adsbygoogle.js'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">await</span> page<span class="token punctuation">.</span><span class="token function">goto</span><span class="token punctuation">(</span><span class="token string">'https://cnn.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>page</code></strong>: <code>Page</code> - Puppeteer <a href="https://pptr.dev/#?product=Puppeteer&amp;show=api-class-page" target="_blank" rel="noopener"><code>Page</code></a> object.</li>
+<li><strong><code>[options]</code></strong>: <code>object</code>
+<ul>
+<li><strong><code>[urlPatterns]</code></strong>: <code>Array&lt;string&gt;</code> - The patterns of URLs to block from being loaded by the browser. Only <code>*</code> can be used as a wildcard. It
+is also automatically added to the beginning and end of the pattern. This limitation is enforced by the DevTools protocol. <code>.png</code> is the same
+as <code>*.png*</code>.</li>
+<li><strong><code>[extraUrlPatterns]</code></strong>: <code>Array&lt;string&gt;</code> - If you just want to append to the default blocked patterns, use this property.</li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;void&gt;</code></p>
+<hr>
+<p><a name="cacheresponses"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="puppeteercacheresponsespage-cache-responseurlrules"></a><a href="#puppeteercacheresponsespage-cache-responseurlrules" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><del><code>puppeteer.cacheResponses(page, cache, responseUrlRules)</code></del></h2>
+<p><strong><em>Deprecated</em></strong></p>
+<p><em>NOTE:</em> In recent versions of Puppeteer using this function entirely disables browser cache which resolves in sub-optimal performance. Until this
+resolves, we suggest just relying on the in-browser cache unless absolutely necessary.</p>
+<p>Enables caching of intercepted responses into a provided object. Automatically enables request interception in Puppeteer. <em>IMPORTANT</em>: Caching
+responses stores them to memory, so too loose rules could cause memory leaks for longer running crawlers. This issue should be resolved or atleast
+mitigated in future iterations of this feature.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>page</code></strong>: <code>Page</code> - Puppeteer <a href="https://pptr.dev/#?product=Puppeteer&amp;show=api-class-page" target="_blank" rel="noopener"><code>Page</code></a> object.</li>
+<li><strong><code>cache</code></strong>: <code>Object&lt;string, *&gt;</code> - Object in which responses are stored</li>
+<li><strong><code>responseUrlRules</code></strong>: <code>Array&lt;(string|RegExp)&gt;</code> - List of rules that are used to check if the response should be cached. String rules are
+compared as page.url().includes(rule) while RegExp rules are evaluated as rule.test(page.url()).</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;void&gt;</code></p>
+<hr>
+<p><a name="compilescript"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="puppeteercompilescriptscriptstring-context"></a><a href="#puppeteercompilescriptscriptstring-context" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>puppeteer.compileScript(scriptString, context)</code></h2>
+<p>Compiles a Puppeteer script into an async function that may be executed at any time by providing it with the following object:</p>
+<pre><code class="hljs"><span class="token punctuation">{</span>
+   page<span class="token operator">:</span> Page<span class="token punctuation">,</span>
+   request<span class="token operator">:</span> Request<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Where <code>page</code> is a Puppeteer <a href="https://pptr.dev/#?product=Puppeteer&amp;show=api-class-page" target="_blank" rel="noopener"><code>Page</code></a> and <code>request</code> is a <a href="../api/request"><code>Request</code></a>.</p>
+<p>The function is compiled by using the <code>scriptString</code> parameter as the function's body, so any limitations to function bodies apply. Return value of
+the compiled function is the return value of the function body = the <code>scriptString</code> parameter.</p>
+<p>As a security measure, no globals such as <code>process</code> or <code>require</code> are accessible from within the function body. Note that the function does not provide
+a safe sandbox and even though globals are not easily accessible, malicious code may still execute in the main process via prototype manipulation.
+Therefore you should only use this function to execute sanitized or safe code.</p>
+<p>Custom context may also be provided using the <code>context</code> parameter. To improve security, make sure to only pass the really necessary objects to the
+context. Preferably making secured copies beforehand.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>scriptString</code></strong>: <code>string</code></li>
+<li><strong><code>context</code></strong>: <code>Object&lt;string, *&gt;</code></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../typedefs/compiled-script-function"><code>CompiledScriptFunction</code></a></p>
+<hr>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/2.0.1/api/playwright"><span class="arrow-prev">← </span><span>utils.playwright</span></a><a class="docs-next button" href="/docs/2.0.1/api/social"><span>utils.social</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#puppeteeraddinterceptrequesthandler"><code>puppeteer.addInterceptRequestHandler</code></a></li><li><a href="#puppeteerremoveinterceptrequesthandler"><code>puppeteer.removeInterceptRequestHandler</code></a></li><li><a href="#puppeteergotoextended"><code>puppeteer.gotoExtended</code></a></li><li><a href="#puppeteerinfinitescroll"><code>puppeteer.infiniteScroll</code></a></li><li><a href="#puppeteersavesnapshot"><code>puppeteer.saveSnapshot</code></a></li><li><a href="#puppeteerenqueuelinksbyclickingelementsoptions"><code>puppeteer.enqueueLinksByClickingElements(options)</code></a></li><li><a href="#puppeteerinjectfilepage-filepath-options"><code>puppeteer.injectFile(page, filePath, [options])</code></a></li><li><a href="#puppeteerinjectjquerypage"><code>puppeteer.injectJQuery(page)</code></a></li><li><a href="#puppeteerinjectunderscorepage"><code>puppeteer.injectUnderscore(page)</code></a></li><li><a href="#puppeteerblockrequestspage-options"><code>puppeteer.blockRequests(page, [options])</code></a></li><li><a href="#puppeteercacheresponsespage-cache-responseurlrules"><del><code>puppeteer.cacheResponses(page, cache, responseUrlRules)</code></del></a></li><li><a href="#puppeteercompilescriptscriptstring-context"><code>puppeteer.compileScript(scriptString, context)</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/apify_logo.svg" alt="Apify SDK" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/guides/motivation">Guide</a><a href="/docs/examples/crawl-multiple-urls">Examples</a><a href="/docs/api/apify">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/apify" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/apify" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://www.facebook.com/apifytech" target="_blank" rel="noreferrer noopener">Facebook</a></div><div><h5>More</h5><a href="https://apify.com" target="_blank">Apify Cloud</a><a href="https://docusaurus.io" target="_blank">Docusaurus</a><a href="https://github.com/apify/apify-js" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2021 Apify Technologies s.r.o.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '64ce2544769e34add0e6402688c86e92',
+                indexName: 'apify_sdk',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["version:2.0.1"]}
+              });
+            </script></body></html>

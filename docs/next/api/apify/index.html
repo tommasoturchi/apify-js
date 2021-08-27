@@ -267,6 +267,9 @@ maximum of available CPU resources. If that's the case, the actor should not add
 <li><code>migrating</code>: <code>void</code> Emitted when the actor running on the Apify platform is going to be migrated to another worker server soon. You can use it to
 persist the state of the actor and abort the run, to speed up migration. For example, this is used by the <a href="../api/request-list"><code>RequestList</code></a>
 class.</li>
+<li><code>aborting</code>: <code>void</code> When a user aborts an actor run on the Apify platform, they can choose to abort gracefully to allow the actor some time before
+getting killed. This graceful abort emits the <code>aborting</code> event which the SDK uses to gracefully stop running crawls and you can use it to do your
+own cleanup as well.</li>
 <li><code>persistState</code>: <code>{ &quot;isMigrating&quot;: Boolean }</code> Emitted in regular intervals (by default 60 seconds) to notify all components of Apify SDK that it is
 time to persist their state, in order to avoid repeating all work when the actor restarts. This event is automatically emitted together with the
 <code>migrating</code> event, in which case the <code>isMigrating</code> flag is set to <code>true</code>. Otherwise the flag is <code>false</code>. Note that the <code>persistState</code> event is
