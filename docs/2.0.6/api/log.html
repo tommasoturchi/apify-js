@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>utils.log · Apify SDK</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;a name=&quot;log&quot;&gt;&lt;/a&gt;"/><meta name="docsearch:version" content="2.0.6"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="utils.log · Apify SDK"/><meta property="og:type" content="website"/><meta property="og:url" content="https://sdk.apify.com/"/><meta property="og:description" content="&lt;a name=&quot;log&quot;&gt;&lt;/a&gt;"/><meta property="og:image" content="https://sdk.apify.com/img/apify_og_SDK.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://sdk.apify.com/img/apify_og_SDK.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-67003981-4"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-67003981-4');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/apify_logo.svg" alt="Apify SDK"/><h2 class="headerTitleWithLogo">Apify SDK</h2></a><a href="/versions"><h3>2.0.6</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class="siteNavGroupActive"><a href="/docs/2.0.6/guides/motivation" target="_self">Guide</a></li><li class="siteNavGroupActive"><a href="/docs/2.0.6/examples/crawl-multiple-urls" target="_self">Examples</a></li><li class="siteNavGroupActive"><a href="/docs/2.0.6/api/apify" target="_self">API Reference</a></li><li class=""><a href="https://github.com/apify/apify-js" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Utilities</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Guide<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/2.0.6/guides/motivation">Motivation</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/guides/quick-start">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/guides/apify-platform">Apify Platform</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/guides/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/guides/request-storage">Request Storage</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/guides/result-storage">Result Storage</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/guides/environment-variables">Environment Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/guides/proxy-management">Proxy Management</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/guides/session-management">Session Management</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/guides/type-script-actor">TypeScript Actors</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/guides/docker-images">Running in Docker</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/guides/migration-to-v1">Migration to version 1</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Examples<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/accept-user-input">Accept user input</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/add-data-to-dataset">Add data to dataset</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/basic-crawler">Basic crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/call-actor">Call actor</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/capture-screenshot">Capture a screenshot</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/cheerio-crawler">Cheerio crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/crawl-all-links">Crawl all links on a website</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/crawl-multiple-urls">Crawl multiple URLs</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/crawl-relative-links">Crawl a website with relative links</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/crawl-single-url">Crawl a single URL</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/crawl-sitemap">Crawl a sitemap</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/crawl-some-links">Crawl some links on a website</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/forms">Forms</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/map-and-reduce">Dataset Map and Reduce methods</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/playwright-crawler">Playwright crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/puppeteer-crawler">Puppeteer crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/puppeteer-recursive-crawl">Puppeteer recursive crawl</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/puppeteer-with-proxy">Puppeteer with proxy</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/synchronous-run">Synchronous run</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/examples/use-stealth-mode">Use stealth mode</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/apify">Apify</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/configuration">Configuration</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Crawlers</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/basic-crawler">BasicCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/cheerio-crawler">CheerioCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/playwright-crawler">PlaywrightCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/puppeteer-crawler">PuppeteerCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/statistics">Statistics</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Result Stores</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/dataset">Dataset</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/key-value-store">KeyValueStore</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Scaling</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/autoscaled-pool">AutoscaledPool</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/session">Session</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/session-pool">SessionPool</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/proxy-configuration">ProxyConfiguration</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/snapshotter">Snapshotter</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/system-status">SystemStatus</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Sources</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/request">Request</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/request-list">RequestList</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/request-queue">RequestQueue</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/pseudo-url">PseudoUrl</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Utilities</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/utils">utils</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/2.0.6/api/log">utils.log</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/playwright">utils.playwright</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/puppeteer">utils.puppeteer</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/social">utils.social</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Type Definitions<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Constructor Options</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/autoscaled-pool-options">AutoscaledPoolOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/basic-crawler-options">BasicCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/cheerio-crawler-options">CheerioCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/playwright-crawler-options">PlaywrightCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/playwright-launch-context">PlaywrightLaunchContext</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/puppeteer-crawler-options">PuppeteerCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/puppeteer-launch-context">PuppeteerLaunchContext</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/proxy-configuration-options">ProxyConfigurationOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/proxy-info">ProxyInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/logger-options">LoggerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/request-options">RequestOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/request-list-options">RequestListOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/request-as-browser-options">RequestAsBrowserOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/session-options">SessionOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/session-pool-options">SessionPoolOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/snapshotter-options">SnapshotterOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/stealth-options">StealthOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/system-status-options">SystemStatusOptions</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Crawlers</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/cheerio-handle-page">CheerioHandlePage</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/cheerio-handle-page-inputs">CheerioHandlePageInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/handle-failed-request">HandleFailedRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/handle-failed-request-input">HandleFailedRequestInput</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/handle-request">HandleRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/handle-request-inputs">HandleRequestInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/prepare-request">PrepareRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/prepare-request-inputs">PrepareRequestInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/puppeteer-handle-page">PuppeteerHandlePage</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/puppeteer-handle-page-inputs">PuppeteerHandlePageInputs</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Dataset</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/dataset-consumer">DatasetConsumer</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/dataset-mapper">DatasetMapper</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/dataset-reducer">DatasetReducer</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - KeyValueStore</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/key-consumer">KeyConsumer</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Sessions</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/create-session">CreateSession</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Utilities</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/request-transform">RequestTransform</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Return Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/actor-run">ActorRun</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/api/apify-call-error">ApifyCallError</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/apify-env">ApifyEnv</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/dataset-content">DatasetContent</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/memory-info">MemoryInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/queue-operation-info">QueueOperationInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/request-list-state">RequestListState</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/session-state">SessionState</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/social-handles">SocialHandles</a></li><li class="navListItem"><a class="navItem" href="/docs/2.0.6/typedefs/system-info">SystemInfo</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">utils.log</h1></header><article><div><span><p><a name="log"></a></p>
+<p>The log instance enables level aware logging of messages and we advise to use it instead of <code>console.log()</code> and its aliases in most development
+scenarios.</p>
+<p>A very useful use case for <code>log</code> is using <code>log.debug</code> liberally throughout the codebase to get useful logging messages only when appropriate log level
+is set and keeping the console tidy in production environments.</p>
+<p>The available logging levels are, in this order: <code>DEBUG</code>, <code>INFO</code>, <code>WARNING</code>, <code>ERROR</code>, <code>OFF</code> and can be referenced from the <code>log.LEVELS</code> constant, such
+as <code>log.LEVELS.ERROR</code>.</p>
+<p>To log messages to the system console, use the <code>log.level(message)</code> invocation, such as <code>log.debug('this is a debug message')</code>.</p>
+<p>To prevent writing of messages above a certain log level to the console, simply set the appropriate level. The default log level is <code>INFO</code>, which
+means that <code>DEBUG</code> messages will not be printed, unless enabled.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> Apify <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'apify'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> log <span class="token punctuation">}</span> <span class="token operator">=</span> Apify<span class="token punctuation">.</span>utils<span class="token punctuation">;</span>
+
+log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'Information message'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> someData<span class="token operator">:</span> <span class="token number">123</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// prints message</span>
+log<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">'Debug message'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> debugData<span class="token operator">:</span> <span class="token string">'hello'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// doesn't print anything</span>
+
+log<span class="token punctuation">.</span><span class="token function">setLevel</span><span class="token punctuation">(</span>log<span class="token punctuation">.</span><span class="token constant">LEVELS</span><span class="token punctuation">.</span><span class="token constant">DEBUG</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+log<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">'Debug message'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// prints message</span>
+
+log<span class="token punctuation">.</span><span class="token function">setLevel</span><span class="token punctuation">(</span>log<span class="token punctuation">.</span><span class="token constant">LEVELS</span><span class="token punctuation">.</span><span class="token constant">ERROR</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+log<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">'Debug message'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// doesn't print anything</span>
+log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'Info message'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// doesn't print anything</span>
+
+log<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Error message'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> errorDetails<span class="token operator">:</span> <span class="token string">'This is bad!'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// prints message</span>
+<span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'Not good!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    log<span class="token punctuation">.</span><span class="token function">exception</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> <span class="token string">'Exception occurred'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> errorDetails<span class="token operator">:</span> <span class="token string">'This is really bad!'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// prints message</span>
+<span class="token punctuation">}</span>
+
+log<span class="token punctuation">.</span><span class="token function">setOptions</span><span class="token punctuation">(</span><span class="token punctuation">{</span> prefix<span class="token operator">:</span> <span class="token string">'My actor'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'I am running!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// prints "My actor: I am running"</span>
+
+<span class="token keyword">const</span> childLog <span class="token operator">=</span> log<span class="token punctuation">.</span><span class="token function">child</span><span class="token punctuation">(</span><span class="token punctuation">{</span> prefix<span class="token operator">:</span> <span class="token string">'Crawler'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'I am crawling!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// prints "My actor:Crawler: I am crawling"</span>
+</code></pre>
+<p>Another very useful way of setting the log level is by setting the <code>APIFY_LOG_LEVEL</code> environment variable, such as <code>APIFY_LOG_LEVEL=DEBUG</code>. This way,
+no code changes are necessary to turn on your debug messages and start debugging right away.</p>
+<p>To add timestamps to your logs, you can override the default logger settings:</p>
+<pre><code class="hljs css language-js">log<span class="token punctuation">.</span><span class="token function">setOptions</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    logger<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">log<span class="token punctuation">.</span>LoggerText</span><span class="token punctuation">(</span><span class="token punctuation">{</span> skipTime<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>You can customize your logging further by extending or replacing the default logger instances with your own implementations.</p>
+<hr>
+<p><a name="levels"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="loglevels"></a><a href="#loglevels" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>log.LEVELS</code></h2>
+<p>Map of available log levels that's useful for easy setting of appropriate log levels. Each log level is represented internally by a number. Eg.
+<code>log.LEVELS.DEBUG === 5</code>.</p>
+<hr>
+<p><a name="setlevel"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="logsetlevellevel"></a><a href="#logsetlevellevel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>log.setLevel(level)</code></h2>
+<p>Sets the log level to the given value, preventing messages from less important log levels from being printed to the console. Use in conjunction with
+the <code>log.LEVELS</code> constants such as</p>
+<pre><code class="hljs">log<span class="token punctuation">.</span><span class="token function">setLevel</span><span class="token punctuation">(</span>log<span class="token punctuation">.</span><span class="token constant">LEVELS</span><span class="token punctuation">.</span><span class="token constant">DEBUG</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Default log level is INFO.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>level</code></strong>: <code>number</code></li>
+</ul>
+<hr>
+<p><a name="getlevel"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="loggetlevel"></a><a href="#loggetlevel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>log.getLevel()</code></h2>
+<p>Returns the currently selected logging level. This is useful for checking whether a message will actually be printed to the console before one
+actually performs a resource intensive operation to construct the message, such as querying a DB for some metadata that need to be added. If the log
+level is not high enough at the moment, it doesn't make sense to execute the query.</p>
+<hr>
+<p><a name="setoptions"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="logsetoptionsoptions"></a><a href="#logsetoptionsoptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>log.setOptions(options)</code></h2>
+<p>Configures logger.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>options</code></strong>: <a href="../typedefs/logger-options"><code>LoggerOptions</code></a></li>
+</ul>
+<hr>
+<p><a name="child"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="logchildoptions"></a><a href="#logchildoptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>log.child([options])</code></h2>
+<p>Creates a new instance of logger that inherits settings from a parent logger.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>[options]</code></strong>: <a href="../typedefs/logger-options"><code>LoggerOptions</code></a> - Supports the same options as the <code>setOptions()</code> method.</li>
+</ul>
+<hr>
+<p><a name="getoptions"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="loggetoptions"></a><a href="#loggetoptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>log.getOptions()</code></h2>
+<p>Returns the logger configuration.</p>
+<p><strong>Returns</strong>:</p>
+<p><a href="../typedefs/logger-options"><code>LoggerOptions</code></a></p>
+<hr>
+<p><a name="debug"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="logdebugmessage-data"></a><a href="#logdebugmessage-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>log.debug(message, [data])</code></h2>
+<p>Logs a <code>DEBUG</code> message. By default, it will not be written to the console. To see <code>DEBUG</code> messages in the console, set the log level to <code>DEBUG</code> either
+using the <code>log.setLevel(log.LEVELS.DEBUG)</code> method or using the environment variable <code>APIFY_LOG_LEVEL=DEBUG</code>. Data are stringified and appended to the
+message.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>message</code></strong>: <code>string</code></li>
+<li><strong><code>[data]</code></strong>: <code>object</code></li>
+</ul>
+<hr>
+<p><a name="info"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="loginfomessage-data"></a><a href="#loginfomessage-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>log.info(message, [data])</code></h2>
+<p>Logs an <code>INFO</code> message. <code>INFO</code> is the default log level so info messages will be always logged, unless the log level is changed. Data are stringified
+and appended to the message.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>message</code></strong>: <code>string</code></li>
+<li><strong><code>[data]</code></strong>: <code>object</code></li>
+</ul>
+<hr>
+<p><a name="warning"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="logwarningmessage-data"></a><a href="#logwarningmessage-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>log.warning(message, [data])</code></h2>
+<p>Logs a <code>WARNING</code> level message. Data are stringified and appended to the message.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>message</code></strong>: <code>string</code></li>
+<li><strong><code>[data]</code></strong>: <code>object</code></li>
+</ul>
+<hr>
+<p><a name="error"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="logerrormessage-data"></a><a href="#logerrormessage-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>log.error(message, [data])</code></h2>
+<p>Logs an <code>ERROR</code> message. Use this method to log error messages that are not directly connected to an exception. For logging exceptions, use the
+<code>log.exception</code> method.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>message</code></strong>: <code>string</code></li>
+<li><strong><code>[data]</code></strong>: <code>object</code></li>
+</ul>
+<hr>
+<p><a name="exception"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="logexceptionexception-message-data"></a><a href="#logexceptionexception-message-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>log.exception(exception, [message], [data])</code></h2>
+<p>Logs an <code>ERROR</code> level message with a nicely formatted exception. Note that the exception is the first parameter here and an additional message is only
+optional.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>exception</code></strong>: <code>Error</code></li>
+<li><strong><code>[message]</code></strong>: <code>string</code></li>
+<li><strong><code>[data]</code></strong>: <code>object</code></li>
+</ul>
+<hr>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/2.0.6/api/utils"><span class="arrow-prev">← </span><span>utils</span></a><a class="docs-next button" href="/docs/2.0.6/api/playwright"><span>utils.playwright</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#loglevels"><code>log.LEVELS</code></a></li><li><a href="#logsetlevellevel"><code>log.setLevel(level)</code></a></li><li><a href="#loggetlevel"><code>log.getLevel()</code></a></li><li><a href="#logsetoptionsoptions"><code>log.setOptions(options)</code></a></li><li><a href="#logchildoptions"><code>log.child([options])</code></a></li><li><a href="#loggetoptions"><code>log.getOptions()</code></a></li><li><a href="#logdebugmessage-data"><code>log.debug(message, [data])</code></a></li><li><a href="#loginfomessage-data"><code>log.info(message, [data])</code></a></li><li><a href="#logwarningmessage-data"><code>log.warning(message, [data])</code></a></li><li><a href="#logerrormessage-data"><code>log.error(message, [data])</code></a></li><li><a href="#logexceptionexception-message-data"><code>log.exception(exception, [message], [data])</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/apify_logo.svg" alt="Apify SDK" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/guides/motivation">Guide</a><a href="/docs/examples/crawl-multiple-urls">Examples</a><a href="/docs/api/apify">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/apify" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/apify" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://www.facebook.com/apifytech" target="_blank" rel="noreferrer noopener">Facebook</a></div><div><h5>More</h5><a href="https://apify.com" target="_blank">Apify Cloud</a><a href="https://docusaurus.io" target="_blank">Docusaurus</a><a href="https://github.com/apify/apify-js" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2021 Apify Technologies s.r.o.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '64ce2544769e34add0e6402688c86e92',
+                indexName: 'apify_sdk',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["version:2.0.6"]}
+              });
+            </script></body></html>
