@@ -1,0 +1,280 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>utils · Apify SDK</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;a name=&quot;utils&quot;&gt;&lt;/a&gt;"/><meta name="docsearch:version" content="2.1.0"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="utils · Apify SDK"/><meta property="og:type" content="website"/><meta property="og:url" content="https://sdk.apify.com/"/><meta property="og:description" content="&lt;a name=&quot;utils&quot;&gt;&lt;/a&gt;"/><meta property="og:image" content="https://sdk.apify.com/img/apify_og_SDK.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://sdk.apify.com/img/apify_og_SDK.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-67003981-4"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-67003981-4');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/apify_logo.svg" alt="Apify SDK"/><h2 class="headerTitleWithLogo">Apify SDK</h2></a><a href="/versions"><h3>2.1.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class="siteNavGroupActive"><a href="/docs/2.1.0/guides/motivation" target="_self">Guide</a></li><li class="siteNavGroupActive"><a href="/docs/2.1.0/examples/crawl-multiple-urls" target="_self">Examples</a></li><li class="siteNavGroupActive"><a href="/docs/2.1.0/api/apify" target="_self">API Reference</a></li><li class=""><a href="https://github.com/apify/apify-js" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Utilities</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Guide<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/2.1.0/guides/motivation">Motivation</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/guides/quick-start">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/guides/apify-platform">Apify Platform</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/guides/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/guides/request-storage">Request Storage</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/guides/result-storage">Result Storage</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/guides/environment-variables">Environment Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/guides/proxy-management">Proxy Management</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/guides/session-management">Session Management</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/guides/type-script-actor">TypeScript Actors</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/guides/docker-images">Running in Docker</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/guides/migration-to-v1">Migration to version 1</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Examples<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/accept-user-input">Accept user input</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/add-data-to-dataset">Add data to dataset</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/basic-crawler">Basic crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/call-actor">Call actor</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/capture-screenshot">Capture a screenshot</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/cheerio-crawler">Cheerio crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/crawl-all-links">Crawl all links on a website</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/crawl-multiple-urls">Crawl multiple URLs</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/crawl-relative-links">Crawl a website with relative links</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/crawl-single-url">Crawl a single URL</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/crawl-sitemap">Crawl a sitemap</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/crawl-some-links">Crawl some links on a website</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/forms">Forms</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/map-and-reduce">Dataset Map and Reduce methods</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/playwright-crawler">Playwright crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/puppeteer-crawler">Puppeteer crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/puppeteer-recursive-crawl">Puppeteer recursive crawl</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/puppeteer-with-proxy">Puppeteer with proxy</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/synchronous-run">Synchronous run</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/examples/use-stealth-mode">Use stealth mode</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/apify">Apify</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/configuration">Configuration</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Crawlers</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/basic-crawler">BasicCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/cheerio-crawler">CheerioCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/playwright-crawler">PlaywrightCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/puppeteer-crawler">PuppeteerCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/statistics">Statistics</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Result Stores</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/dataset">Dataset</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/key-value-store">KeyValueStore</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Scaling</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/autoscaled-pool">AutoscaledPool</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/session">Session</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/session-pool">SessionPool</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/proxy-configuration">ProxyConfiguration</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/snapshotter">Snapshotter</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/system-status">SystemStatus</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Sources</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/request">Request</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/request-list">RequestList</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/request-queue">RequestQueue</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/pseudo-url">PseudoUrl</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Utilities</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/2.1.0/api/utils">utils</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/log">utils.log</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/playwright">utils.playwright</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/puppeteer">utils.puppeteer</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/social">utils.social</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Type Definitions<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Constructor Options</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/autoscaled-pool-options">AutoscaledPoolOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/basic-crawler-options">BasicCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/cheerio-crawler-options">CheerioCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/playwright-crawler-options">PlaywrightCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/playwright-launch-context">PlaywrightLaunchContext</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/puppeteer-crawler-options">PuppeteerCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/puppeteer-launch-context">PuppeteerLaunchContext</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/proxy-configuration-options">ProxyConfigurationOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/proxy-info">ProxyInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/logger-options">LoggerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/request-options">RequestOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/request-list-options">RequestListOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/request-as-browser-options">RequestAsBrowserOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/session-options">SessionOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/session-pool-options">SessionPoolOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/snapshotter-options">SnapshotterOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/stealth-options">StealthOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/system-status-options">SystemStatusOptions</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Crawlers</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/cheerio-handle-page">CheerioHandlePage</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/cheerio-handle-page-inputs">CheerioHandlePageInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/handle-failed-request">HandleFailedRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/handle-failed-request-input">HandleFailedRequestInput</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/handle-request">HandleRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/handle-request-inputs">HandleRequestInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/prepare-request">PrepareRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/prepare-request-inputs">PrepareRequestInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/puppeteer-handle-page">PuppeteerHandlePage</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/puppeteer-handle-page-inputs">PuppeteerHandlePageInputs</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Dataset</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/dataset-consumer">DatasetConsumer</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/dataset-mapper">DatasetMapper</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/dataset-reducer">DatasetReducer</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - KeyValueStore</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/key-consumer">KeyConsumer</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Sessions</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/create-session">CreateSession</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Utilities</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/request-transform">RequestTransform</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Return Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/actor-run">ActorRun</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/api/apify-call-error">ApifyCallError</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/apify-env">ApifyEnv</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/dataset-content">DatasetContent</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/memory-info">MemoryInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/queue-operation-info">QueueOperationInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/request-list-state">RequestListState</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/session-state">SessionState</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/social-handles">SocialHandles</a></li><li class="navListItem"><a class="navItem" href="/docs/2.1.0/typedefs/system-info">SystemInfo</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">utils</h1></header><article><div><span><p><a name="utils"></a></p>
+<p>A namespace that contains various utilities.</p>
+<p><strong>Example usage:</strong></p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> Apify <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'apify'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token operator">...</span>
+
+<span class="token comment">// Sleep 1.5 seconds</span>
+<span class="token keyword">await</span> Apify<span class="token punctuation">.</span>utils<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<hr>
+<p><a name="url_no_commas_regex"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="utilsurl_no_commas_regex"></a><a href="#utilsurl_no_commas_regex" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>utils.URL_NO_COMMAS_REGEX</code></h2>
+<p>Default regular expression to match URLs in a string that may be plain text, JSON, CSV or other. It supports common URL characters and does not
+support URLs containing commas or spaces. The URLs also may contain Unicode letters (not symbols).</p>
+<hr>
+<p><a name="url_with_commas_regex"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="utilsurl_with_commas_regex"></a><a href="#utilsurl_with_commas_regex" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>utils.URL_WITH_COMMAS_REGEX</code></h2>
+<p>Regular expression that, in addition to the default regular expression <code>URL_NO_COMMAS_REGEX</code>, supports matching commas in URL path and query. Note,
+however, that this may prevent parsing URLs from comma delimited lists, or the URLs may become malformed.</p>
+<hr>
+<p><a name="enqueuelinks"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="utilsenqueuelinksoptions"></a><a href="#utilsenqueuelinksoptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>utils.enqueueLinks(options)</code></h2>
+<p>The function finds elements matching a specific CSS selector (HTML anchor (<code>&lt;a&gt;</code>) by default) either in a Puppeteer page, or in a Cheerio object
+(parsed HTML), and enqueues the URLs in their <code>href</code> attributes to the provided <a href="../api/request-queue"><code>RequestQueue</code></a>. If you're looking to find URLs
+in JavaScript heavy pages where links are not available in <code>href</code> elements, but rather navigations are triggered in click handlers see
+<a href="../api/puppeteer#enqueuelinksbyclickingelements"><code>puppeteer.enqueueLinksByClickingElements()</code></a>.</p>
+<p>Optionally, the function allows you to filter the target links' URLs using an array of <a href="../api/pseudo-url"><code>PseudoUrl</code></a> objects and override settings
+of the enqueued <a href="../api/request"><code>Request</code></a> objects.</p>
+<p><strong>Example usage</strong></p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">await</span> Apify<span class="token punctuation">.</span>utils<span class="token punctuation">.</span><span class="token function">enqueueLinks</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    page<span class="token punctuation">,</span>
+    requestQueue<span class="token punctuation">,</span>
+    selector<span class="token operator">:</span> <span class="token string">'a.product-detail'</span><span class="token punctuation">,</span>
+    pseudoUrls<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'https://www.example.com/handbags/[.*]'</span><span class="token punctuation">,</span> <span class="token string">'https://www.example.com/purses/[.*]'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><p><strong><code>options</code></strong>: <code>object</code> - All <code>enqueueLinks()</code> parameters are passed via an options object with the following keys:</p>
+<ul>
+<li><strong><code>[page]</code></strong>: <code>PuppeteerPage</code> | <code>PlaywrightPage</code> - Puppeteer <a href="https://pptr.dev/#?product=Puppeteer&amp;show=api-class-page" target="_blank" rel="noopener"><code>Page</code></a> object. Either
+<code>page</code> or <code>$</code> option must be provided.</li>
+<li><strong><code>[limit]</code></strong>: <code>Number</code> - Limit the count of actually enqueued URLs to this number. Useful for testing across the entire crawling scope.</li>
+<li><strong><code>[$]</code></strong>: <code>cheerio.Root</code> | <code>cheerio.Selector</code> - <a href="https://github.com/cheeriojs/cheerio" target="_blank" rel="noopener"><code>Cheerio</code></a> function with loaded HTML. Either <code>page</code> or
+<code>$</code> option must be provided.</li>
+<li><strong><code>requestQueue</code></strong>: <a href="../api/request-queue"><code>RequestQueue</code></a> - A request queue to which the URLs will be enqueued.</li>
+<li><strong><code>[selector]</code></strong>: <code>string</code> <code> = &quot;'a'&quot;</code> - A CSS selector matching links to be enqueued.</li>
+<li><strong><code>[baseUrl]</code></strong>: <code>string</code> - A base URL that will be used to resolve relative URLs when using Cheerio. Ignored when using Puppeteer, since the
+relative URL resolution is done inside the browser automatically.</li>
+<li><strong><code>[pseudoUrls]</code></strong>: <code>Array&lt;Object&lt;string, *&amp;gt;&gt;</code> | <code>Array.&amp;lt;string&gt;</code> - An array of <a href="../api/pseudo-url"><code>PseudoUrl</code></a>s matching the URLs to
+be enqueued, or an array of strings or RegExps or plain Objects from which the <a href="../api/pseudo-url"><code>PseudoUrl</code></a>s can be constructed.</li>
+</ul>
+<p>The plain objects must include at least the <code>purl</code> property, which holds the pseudo-URL string or RegExp. All remaining keys will be used as the
+<code>requestTemplate</code> argument of the <a href="../api/pseudo-url"><code>PseudoUrl</code></a> constructor, which lets you specify special properties for the enqueued
+<a href="../api/request"><code>Request</code></a> objects.</p>
+<p>If <code>pseudoUrls</code> is an empty array, <code>null</code> or <code>undefined</code>, then the function enqueues all links found on the page.</p>
+<ul>
+<li><strong><code>[transformRequestFunction]</code></strong>: <a href="../typedefs/request-transform"><code>RequestTransform</code></a> - Just before a new <a href="../api/request"><code>Request</code></a> is
+constructed and enqueued to the <a href="../api/request-queue"><code>RequestQueue</code></a>, this function can be used to remove it or modify its contents such as
+<code>userData</code>, <code>payload</code> or, most importantly <code>uniqueKey</code>. This is useful when you need to enqueue multiple <code>Requests</code> to the queue that share
+the same URL, but differ in methods or payloads, or to dynamically update or create <code>userData</code>.</li>
+</ul>
+<p>For example: by adding <code>keepUrlFragment: true</code> to the <code>request</code> object, URL fragments will not be removed when <code>uniqueKey</code> is computed.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="hljs css language-javascript"><span class="token punctuation">{</span>
+    <span class="token function-variable function">transformRequestFunction</span><span class="token operator">:</span> <span class="token parameter">request</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        request<span class="token punctuation">.</span>userData<span class="token punctuation">.</span>foo <span class="token operator">=</span> <span class="token string">'bar'</span><span class="token punctuation">;</span>
+        request<span class="token punctuation">.</span>keepUrlFragment <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> request<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../typedefs/queue-operation-info"><code>Promise&lt;Array&lt;QueueOperationInfo&gt;&gt;</code></a> - Promise that resolves to an array of
+<a href="../typedefs/queue-operation-info"><code>QueueOperationInfo</code></a> objects.</p>
+<hr>
+<p><a name="requestasbrowser"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="utilsrequestasbrowseroptions"></a><a href="#utilsrequestasbrowseroptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>utils.requestAsBrowser(options)</code></h2>
+<p><strong>IMPORTANT:</strong> This function uses an insecure version of HTTP parser by default and also ignores SSL/TLS errors. This is very useful in scraping,
+because it allows bypassing certain anti-scraping walls, but it also exposes some vulnerability. For other than scraping scenarios, please set
+<code>useInsecureHttpParser: false</code> and <code>ignoreSslErrors: false</code>.</p>
+<p>Sends a HTTP request that looks like a request sent by a web browser, fully emulating browser's HTTP headers. It uses HTTP2 by default for Node 12+.</p>
+<p>This function is useful for web scraping of websites that send the full HTML in the first response. Thanks to this function, the target web server has
+no simple way to find out the request hasn't been sent by a human's web browser. Using a headless browser for such requests is an order of magnitude
+more resource-intensive than this function.</p>
+<p>The function emulates the Chrome and Firefox web browsers. If you want more control over the browsers and their versions, use the
+<code>headerGeneratorOptions</code> property. You can find more info in the readme of the <a href="https://github.com/apify/header-generator" target="_blank" rel="noopener"><code>header-generator</code></a>
+library.</p>
+<p>Internally, the function uses the <a href="https://github.com/apify/got-scraping" target="_blank" rel="noopener"><code>got-scraping</code></a> library to perform the request. All <code>options</code> not recognized
+by this function are passed to it so see it for more details.</p>
+<p><strong>Example usage:</strong></p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> Apify <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'apify'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> utils<span class="token operator">:</span> <span class="token punctuation">{</span> requestAsBrowser <span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token operator">=</span> Apify<span class="token punctuation">;</span>
+
+<span class="token operator">...</span>
+
+<span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">requestAsBrowser</span><span class="token punctuation">(</span><span class="token punctuation">{</span> url<span class="token operator">:</span> <span class="token string">'https://www.example.com/'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> html <span class="token operator">=</span> response<span class="token punctuation">.</span>body<span class="token punctuation">;</span>
+<span class="token keyword">const</span> status <span class="token operator">=</span> response<span class="token punctuation">.</span>statusCode<span class="token punctuation">;</span>
+<span class="token keyword">const</span> contentType <span class="token operator">=</span> response<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">'content-type'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>options</code></strong>: <a href="../typedefs/request-as-browser-options"><code>RequestAsBrowserOptions</code></a> - All <code>requestAsBrowser</code> configuration options.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../typedefs/request-as-browser-result"><code>Promise&lt;RequestAsBrowserResult&gt;</code></a> - The result can be various objects, but it will always be like a
+<a href="https://nodejs.org/api/http.html#http_class_http_incomingmessage" target="_blank" rel="noopener">Node.js HTTP response stream</a> with a 'body' property for the parsed response body,
+unless the 'stream' option is used.</p>
+<hr>
+<p><a name="isdocker"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="utilsisdockerforcereset"></a><a href="#utilsisdockerforcereset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>utils.isDocker(forceReset)</code></h2>
+<p>Returns a <code>Promise</code> that resolves to true if the code is running in a Docker container.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>forceReset</code></strong>: <code>boolean</code></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;boolean&gt;</code></p>
+<hr>
+<p><a name="sleep"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="utilssleepmillis"></a><a href="#utilssleepmillis" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>utils.sleep(millis)</code></h2>
+<p>Returns a <code>Promise</code> that resolves after a specific period of time. This is useful to implement waiting in your code, e.g. to prevent overloading of
+target website or to avoid bot detection.</p>
+<p><strong>Example usage:</strong></p>
+<pre><code class="hljs"><span class="token keyword">const</span> Apify <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'apify'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token operator">...</span>
+
+<span class="token comment">// Sleep 1.5 seconds</span>
+<span class="token keyword">await</span> Apify<span class="token punctuation">.</span>utils<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>millis</code></strong>: <code>number</code> - Period of time to sleep, in milliseconds. If not a positive number, the returned promise resolves immediately.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;void&gt;</code></p>
+<hr>
+<p><a name="downloadlistofurls"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="utilsdownloadlistofurlsoptions"></a><a href="#utilsdownloadlistofurlsoptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>utils.downloadListOfUrls(options)</code></h2>
+<p>Returns a promise that resolves to an array of urls parsed from the resource available at the provided url. Optionally, custom regular expression and
+encoding may be provided.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>options</code></strong>: <code>object</code>
+<ul>
+<li><strong><code>url</code></strong>: <code>string</code> - URL to the file</li>
+<li><strong><code>[encoding]</code></strong>: <code>string</code> <code> = &quot;'utf8'&quot;</code> - The encoding of the file.</li>
+<li><strong><code>[urlRegExp]</code></strong>: <code>RegExp</code> <code> = URL_NO_COMMAS_REGEX</code> - Custom regular expression to identify the URLs in the file to extract. The
+regular expression should be case-insensitive and have global flag set (i.e. <code>/something/gi</code>).</li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;Array&lt;string&gt;&gt;</code></p>
+<hr>
+<p><a name="extracturls"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="utilsextracturlsoptions"></a><a href="#utilsextracturlsoptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>utils.extractUrls(options)</code></h2>
+<p>Collects all URLs in an arbitrary string to an array, optionally using a custom regular expression.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>options</code></strong>: <code>object</code>
+<ul>
+<li><strong><code>string</code></strong>: <code>string</code></li>
+<li><strong><code>[urlRegExp]</code></strong>: <code>RegExp</code> <code> = Apify.utils.URL_NO_COMMAS_REGEX</code></li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>Array&lt;string&gt;</code></p>
+<hr>
+<p><a name="htmltotext"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="utilshtmltotexthtml"></a><a href="#utilshtmltotexthtml" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>utils.htmlToText(html)</code></h2>
+<p>The function converts a HTML document to a plain text.</p>
+<p>The plain text generated by the function is similar to a text captured by pressing Ctrl+A and Ctrl+C on a page when loaded in a web browser. The
+function doesn't aspire to preserve the formatting or to be perfectly correct with respect to HTML specifications. However, it attempts to generate
+newlines and whitespaces in and around HTML elements to avoid merging distinct parts of text and thus enable extraction of data from the text (e.g.
+phone numbers).</p>
+<p><strong>Example usage</strong></p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> text <span class="token operator">=</span> <span class="token function">htmlToText</span><span class="token punctuation">(</span><span class="token string">'&lt;html>&lt;body>Some text&lt;/body>&lt;/html>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Note that the function uses <a href="https://www.npmjs.com/package/cheerio" target="_blank" rel="noopener">cheerio</a> to parse the HTML. Optionally, to avoid duplicate parsing of HTML and
+thus improve performance, you can pass an existing Cheerio object to the function instead of the HTML text. The HTML should be parsed with the
+<code>decodeEntities</code> option set to <code>true</code>. For example:</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> cheerio <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'cheerio'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> html <span class="token operator">=</span> <span class="token string">'&lt;html>&lt;body>Some text&lt;/body>&lt;/html>'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> text <span class="token operator">=</span> <span class="token function">htmlToText</span><span class="token punctuation">(</span>cheerio<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span>html<span class="token punctuation">,</span> <span class="token punctuation">{</span> decodeEntities<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>html</code></strong>: <code>string</code> | <code>cheerio.Root</code> - HTML text or parsed HTML represented using a <a href="https://www.npmjs.com/package/cheerio" target="_blank" rel="noopener">cheerio</a> function.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><code>string</code> - Plain text</p>
+<hr>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/2.1.0/api/pseudo-url"><span class="arrow-prev">← </span><span class="function-name-prevnext">PseudoUrl</span></a><a class="docs-next button" href="/docs/2.1.0/api/log"><span>utils.log</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#utilsurl_no_commas_regex"><code>utils.URL_NO_COMMAS_REGEX</code></a></li><li><a href="#utilsurl_with_commas_regex"><code>utils.URL_WITH_COMMAS_REGEX</code></a></li><li><a href="#utilsenqueuelinksoptions"><code>utils.enqueueLinks(options)</code></a></li><li><a href="#utilsrequestasbrowseroptions"><code>utils.requestAsBrowser(options)</code></a></li><li><a href="#utilsisdockerforcereset"><code>utils.isDocker(forceReset)</code></a></li><li><a href="#utilssleepmillis"><code>utils.sleep(millis)</code></a></li><li><a href="#utilsdownloadlistofurlsoptions"><code>utils.downloadListOfUrls(options)</code></a></li><li><a href="#utilsextracturlsoptions"><code>utils.extractUrls(options)</code></a></li><li><a href="#utilshtmltotexthtml"><code>utils.htmlToText(html)</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/apify_logo.svg" alt="Apify SDK" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/guides/motivation">Guide</a><a href="/docs/examples/crawl-multiple-urls">Examples</a><a href="/docs/api/apify">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/apify" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/apify" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://www.facebook.com/apifytech" target="_blank" rel="noreferrer noopener">Facebook</a></div><div><h5>More</h5><a href="https://apify.com" target="_blank">Apify Cloud</a><a href="https://docusaurus.io" target="_blank">Docusaurus</a><a href="https://github.com/apify/apify-js" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2021 Apify Technologies s.r.o.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '64ce2544769e34add0e6402688c86e92',
+                indexName: 'apify_sdk',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["version:2.1.0"]}
+              });
+            </script></body></html>
