@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>RequestQueue · Apify SDK</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;a name=&quot;requestqueue&quot;&gt;&lt;/a&gt;"/><meta name="docsearch:version" content="2.2.0"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="RequestQueue · Apify SDK"/><meta property="og:type" content="website"/><meta property="og:url" content="https://sdk.apify.com/"/><meta property="og:description" content="&lt;a name=&quot;requestqueue&quot;&gt;&lt;/a&gt;"/><meta property="og:image" content="https://sdk.apify.com/img/apify_og_SDK.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://sdk.apify.com/img/apify_og_SDK.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-67003981-4"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-67003981-4');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/apify_logo.svg" alt="Apify SDK"/><h2 class="headerTitleWithLogo">Apify SDK</h2></a><a href="/versions"><h3>2.2.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class="siteNavGroupActive"><a href="/docs/2.2.0/guides/motivation" target="_self">Guide</a></li><li class="siteNavGroupActive"><a href="/docs/2.2.0/examples/crawl-multiple-urls" target="_self">Examples</a></li><li class="siteNavGroupActive"><a href="/docs/2.2.0/api/apify" target="_self">API Reference</a></li><li class=""><a href="https://github.com/apify/apify-js" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Sources</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Guide<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/2.2.0/guides/motivation">Motivation</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/guides/quick-start">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/guides/apify-platform">Apify Platform</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/guides/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/guides/request-storage">Request Storage</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/guides/result-storage">Result Storage</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/guides/environment-variables">Environment Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/guides/proxy-management">Proxy Management</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/guides/session-management">Session Management</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/guides/type-script-actor">TypeScript Actors</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/guides/docker-images">Running in Docker</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/guides/migration-to-v1">Migration to version 1</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Examples<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/accept-user-input">Accept user input</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/add-data-to-dataset">Add data to dataset</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/basic-crawler">Basic crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/call-actor">Call actor</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/capture-screenshot">Capture a screenshot</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/cheerio-crawler">Cheerio crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/crawl-all-links">Crawl all links on a website</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/crawl-multiple-urls">Crawl multiple URLs</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/crawl-relative-links">Crawl a website with relative links</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/crawl-single-url">Crawl a single URL</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/crawl-sitemap">Crawl a sitemap</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/crawl-some-links">Crawl some links on a website</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/forms">Forms</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/map-and-reduce">Dataset Map and Reduce methods</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/playwright-crawler">Playwright crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/puppeteer-crawler">Puppeteer crawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/puppeteer-recursive-crawl">Puppeteer recursive crawl</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/puppeteer-with-proxy">Puppeteer with proxy</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/synchronous-run">Synchronous run</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/examples/use-stealth-mode">Use stealth mode</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/apify">Apify</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/configuration">Configuration</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Crawlers</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/basic-crawler">BasicCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/cheerio-crawler">CheerioCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/playwright-crawler">PlaywrightCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/puppeteer-crawler">PuppeteerCrawler</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/statistics">Statistics</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Result Stores</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/dataset">Dataset</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/key-value-store">KeyValueStore</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Scaling</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/autoscaled-pool">AutoscaledPool</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/session">Session</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/session-pool">SessionPool</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/proxy-configuration">ProxyConfiguration</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/snapshotter">Snapshotter</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/system-status">SystemStatus</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Sources</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/request">Request</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/request-list">RequestList</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/2.2.0/api/request-queue">RequestQueue</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/pseudo-url">PseudoUrl</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Utilities</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/utils">utils</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/log">utils.log</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/playwright">utils.playwright</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/puppeteer">utils.puppeteer</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/social">utils.social</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Type Definitions<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Constructor Options</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/autoscaled-pool-options">AutoscaledPoolOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/basic-crawler-options">BasicCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/cheerio-crawler-options">CheerioCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/playwright-crawler-options">PlaywrightCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/playwright-launch-context">PlaywrightLaunchContext</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/puppeteer-crawler-options">PuppeteerCrawlerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/puppeteer-launch-context">PuppeteerLaunchContext</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/proxy-configuration-options">ProxyConfigurationOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/proxy-info">ProxyInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/logger-options">LoggerOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/request-options">RequestOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/request-list-options">RequestListOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/request-as-browser-options">RequestAsBrowserOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/session-options">SessionOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/session-pool-options">SessionPoolOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/snapshotter-options">SnapshotterOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/stealth-options">StealthOptions</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/system-status-options">SystemStatusOptions</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Crawlers</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/cheerio-handle-page">CheerioHandlePage</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/cheerio-handle-page-inputs">CheerioHandlePageInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/handle-failed-request">HandleFailedRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/handle-failed-request-input">HandleFailedRequestInput</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/handle-request">HandleRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/handle-request-inputs">HandleRequestInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/prepare-request">PrepareRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/prepare-request-inputs">PrepareRequestInputs</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/puppeteer-handle-page">PuppeteerHandlePage</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/puppeteer-handle-page-inputs">PuppeteerHandlePageInputs</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Dataset</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/dataset-consumer">DatasetConsumer</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/dataset-mapper">DatasetMapper</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/dataset-reducer">DatasetReducer</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - KeyValueStore</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/key-consumer">KeyConsumer</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Sessions</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/create-session">CreateSession</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Functions - Utilities</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/request-transform">RequestTransform</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Return Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/actor-run">ActorRun</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/api/apify-call-error">ApifyCallError</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/apify-env">ApifyEnv</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/dataset-content">DatasetContent</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/memory-info">MemoryInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/queue-operation-info">QueueOperationInfo</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/request-list-state">RequestListState</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/session-state">SessionState</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/social-handles">SocialHandles</a></li><li class="navListItem"><a class="navItem" href="/docs/2.2.0/typedefs/system-info">SystemInfo</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">RequestQueue</h1></header><article><div><span><p><a name="requestqueue"></a></p>
+<p>Represents a queue of URLs to crawl, which is used for deep crawling of websites where you start with several URLs and then recursively follow links
+to other pages. The data structure supports both breadth-first and depth-first crawling orders.</p>
+<p>Each URL is represented using an instance of the <a href="../api/request"><code>Request</code></a> class. The queue can only contain unique URLs. More precisely, it can
+only contain <a href="../api/request"><code>Request</code></a> instances with distinct <code>uniqueKey</code> properties. By default, <code>uniqueKey</code> is generated from the URL, but it can
+also be overridden. To add a single URL multiple times to the queue, corresponding <a href="../api/request"><code>Request</code></a> objects will need to have different
+<code>uniqueKey</code> properties.</p>
+<p>Do not instantiate this class directly, use the <a href="../api/apify#openrequestqueue"><code>Apify.openRequestQueue()</code></a> function instead.</p>
+<p><code>RequestQueue</code> is used by <a href="../api/basic-crawler"><code>BasicCrawler</code></a>, <a href="../api/cheerio-crawler"><code>CheerioCrawler</code></a>,
+<a href="../api/puppeteer-crawler"><code>PuppeteerCrawler</code></a> and <a href="../api/playwright-crawler"><code>PlaywrightCrawler</code></a> as a source of URLs to crawl. Unlike
+<a href="../api/request-list"><code>RequestList</code></a>, <code>RequestQueue</code> supports dynamic adding and removing of requests. On the other hand, the queue is not optimized
+for operations that add or remove a large number of URLs in a batch.</p>
+<p><code>RequestQueue</code> stores its data either on local disk or in the Apify Cloud, depending on whether the <code>APIFY_LOCAL_STORAGE_DIR</code> or <code>APIFY_TOKEN</code>
+environment variable is set.</p>
+<p>If the <code>APIFY_LOCAL_STORAGE_DIR</code> environment variable is set, the queue data is stored in that directory in an SQLite database file.</p>
+<p>If the <code>APIFY_TOKEN</code> environment variable is set but <code>APIFY_LOCAL_STORAGE_DIR</code> is not, the data is stored in the
+<a href="https://docs.apify.com/storage/request-queue" target="_blank" rel="noopener">Apify Request Queue</a> cloud storage. Note that you can force usage of the cloud storage also by passing
+the <code>forceCloud</code> option to <a href="../api/apify#openrequestqueue"><code>Apify.openRequestQueue()</code></a> function, even if the <code>APIFY_LOCAL_STORAGE_DIR</code> variable is
+set.</p>
+<p><strong>Example usage:</strong></p>
+<pre><code class="hljs css language-javascript"><span class="token comment">// Open the default request queue associated with the actor run</span>
+<span class="token keyword">const</span> queue <span class="token operator">=</span> <span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">openRequestQueue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Open a named request queue</span>
+<span class="token keyword">const</span> queueWithName <span class="token operator">=</span> <span class="token keyword">await</span> Apify<span class="token punctuation">.</span><span class="token function">openRequestQueue</span><span class="token punctuation">(</span><span class="token string">'some-name'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Enqueue few requests</span>
+<span class="token keyword">await</span> queue<span class="token punctuation">.</span><span class="token function">addRequest</span><span class="token punctuation">(</span><span class="token punctuation">{</span> url<span class="token operator">:</span> <span class="token string">'http://example.com/aaa'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">await</span> queue<span class="token punctuation">.</span><span class="token function">addRequest</span><span class="token punctuation">(</span><span class="token punctuation">{</span> url<span class="token operator">:</span> <span class="token string">'http://example.com/bbb'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">await</span> queue<span class="token punctuation">.</span><span class="token function">addRequest</span><span class="token punctuation">(</span><span class="token punctuation">{</span> url<span class="token operator">:</span> <span class="token string">'http://example.com/foo/bar'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> forefront<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<hr>
+<p><a name="addrequest"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="requestqueueaddrequestrequestlike-options"></a><a href="#requestqueueaddrequestrequestlike-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>requestQueue.addRequest(requestLike, [options])</code></h2>
+<p>Adds a request to the queue.</p>
+<p>If a request with the same <code>uniqueKey</code> property is already present in the queue, it will not be updated. You can find out whether this happened from
+the resulting <a href="../typedefs/queue-operation-info"><code>QueueOperationInfo</code></a> object.</p>
+<p>To add multiple requests to the queue by extracting links from a webpage, see the <a href="../api/utils#enqueuelinks"><code>utils.enqueueLinks()</code></a> helper function.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>requestLike</code></strong>: <a href="../api/request"><code>Request</code></a> | <a href="../typedefs/request-options"><code>RequestOptions</code></a> - <a href="../api/request"><code>Request</code></a> object or vanilla
+object with request data. Note that the function sets the <code>uniqueKey</code> and <code>id</code> fields to the passed Request.</li>
+<li><strong><code>[options]</code></strong>: <code>Object</code>
+<ul>
+<li><strong><code>[forefront]</code></strong>: <code>boolean</code> <code> = false</code> - If <code>true</code>, the request will be added to the foremost position in the queue.</li>
+</ul></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../typedefs/queue-operation-info"><code>Promise&lt;QueueOperationInfo&gt;</code></a></p>
+<hr>
+<p><a name="getrequest"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="requestqueuegetrequestid"></a><a href="#requestqueuegetrequestid" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>requestQueue.getRequest(id)</code></h2>
+<p>Gets the request from the queue specified by ID.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>id</code></strong>: <code>string</code> - ID of the request.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../api/request"><code>Promise&lt;(Request|null)&gt;</code></a> - Returns the request object, or <code>null</code> if it was not found.</p>
+<hr>
+<p><a name="fetchnextrequest"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="requestqueuefetchnextrequest"></a><a href="#requestqueuefetchnextrequest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>requestQueue.fetchNextRequest()</code></h2>
+<p>Returns a next request in the queue to be processed, or <code>null</code> if there are no more pending requests.</p>
+<p>Once you successfully finish processing of the request, you need to call
+<a href="../api/request-queue#markrequesthandled"><code>RequestQueue.markRequestHandled()</code></a> to mark the request as handled in the queue. If there was some error in
+processing the request, call <a href="../api/request-queue#reclaimrequest"><code>RequestQueue.reclaimRequest()</code></a> instead, so that the queue will give the request
+to some other consumer in another call to the <code>fetchNextRequest</code> function.</p>
+<p>Note that the <code>null</code> return value doesn't mean the queue processing finished, it means there are currently no pending requests. To check whether all
+requests in queue were finished, use <a href="../api/request-queue#isfinished"><code>RequestQueue.isFinished()</code></a> instead.</p>
+<p><strong>Returns</strong>:</p>
+<p><a href="../api/request"><code>Promise&lt;(Request|null)&gt;</code></a> - Returns the request object or <code>null</code> if there are no more pending requests.</p>
+<hr>
+<p><a name="markrequesthandled"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="requestqueuemarkrequesthandledrequest"></a><a href="#requestqueuemarkrequesthandledrequest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>requestQueue.markRequestHandled(request)</code></h2>
+<p>Marks a request that was previously returned by the <a href="../api/request-queue#fetchnextrequest"><code>RequestQueue.fetchNextRequest()</code></a> function as handled
+after successful processing. Handled requests will never again be returned by the <code>fetchNextRequest</code> function.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>request</code></strong>: <a href="../api/request"><code>Request</code></a></li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../typedefs/queue-operation-info"><code>Promise&lt;QueueOperationInfo&gt;</code></a></p>
+<hr>
+<p><a name="reclaimrequest"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="requestqueuereclaimrequestrequest-options"></a><a href="#requestqueuereclaimrequestrequest-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>requestQueue.reclaimRequest(request, [options])</code></h2>
+<p>Reclaims a failed request back to the queue, so that it can be returned for processed later again by another call to
+<a href="../api/request-queue#fetchnextrequest"><code>RequestQueue.fetchNextRequest()</code></a>. The request record in the queue is updated using the provided <code>request</code>
+parameter. For example, this lets you store the number of retries or error messages for the request.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><strong><code>request</code></strong>: <a href="../api/request"><code>Request</code></a></li>
+<li><strong><code>[options]</code></strong>: <code>object</code> - <strong><code>[forefront]</code></strong>: <code>boolean</code> <code> = false</code> - If <code>true</code> then the request it placed to the beginning of the
+queue, so that it's returned in the next call to <a href="../api/request-queue#fetchnextrequest"><code>RequestQueue.fetchNextRequest()</code></a>. By default, it's put
+to the end of the queue.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="../typedefs/queue-operation-info"><code>Promise&lt;QueueOperationInfo&gt;</code></a></p>
+<hr>
+<p><a name="isempty"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="requestqueueisempty"></a><a href="#requestqueueisempty" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>requestQueue.isEmpty()</code></h2>
+<p>Resolves to <code>true</code> if the next call to <a href="../api/request-queue#fetchnextrequest"><code>RequestQueue.fetchNextRequest()</code></a> would return <code>null</code>, otherwise it
+resolves to <code>false</code>. Note that even if the queue is empty, there might be some pending requests currently being processed. If you need to ensure that
+there is no activity in the queue, use <a href="../api/request-queue#isfinished"><code>RequestQueue.isFinished()</code></a>.</p>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;boolean&gt;</code></p>
+<hr>
+<p><a name="isfinished"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="requestqueueisfinished"></a><a href="#requestqueueisfinished" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>requestQueue.isFinished()</code></h2>
+<p>Resolves to <code>true</code> if all requests were already handled and there are no more left. Due to the nature of distributed storage used by the queue, the
+function might occasionally return a false negative, but it will never return a false positive.</p>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;boolean&gt;</code></p>
+<hr>
+<p><a name="drop"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="requestqueuedrop"></a><a href="#requestqueuedrop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>requestQueue.drop()</code></h2>
+<p>Removes the queue either from the Apify Cloud storage or from the local database, depending on the mode of operation.</p>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;void&gt;</code></p>
+<hr>
+<p><a name="handledcount"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="requestqueuehandledcount"></a><a href="#requestqueuehandledcount" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>requestQueue.handledCount()</code></h2>
+<p>Returns the number of handled requests.</p>
+<p>This function is just a convenient shortcut for:</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> <span class="token punctuation">{</span> handledRequestCount <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> queue<span class="token punctuation">.</span><span class="token function">getInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Returns</strong>:</p>
+<p><code>Promise&lt;number&gt;</code></p>
+<hr>
+<p><a name="getinfo"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="requestqueuegetinfo"></a><a href="#requestqueuegetinfo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>requestQueue.getInfo()</code></h2>
+<p>Returns an object containing general information about the request queue.</p>
+<p>The function returns the same object as the Apify API Client's <a href="https://docs.apify.com/api/apify-client-js/latest#ApifyClient-requestQueues" target="_blank" rel="noopener">getQueue</a>
+function, which in turn calls the <a href="https://apify.com/docs/api/v2#/reference/request-queues/queue/get-request-queue" target="_blank" rel="noopener">Get request queue</a> API endpoint.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="hljs"><span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token string">"WkzbQMuFYuamGv3YF"</span><span class="token punctuation">,</span>
+  name<span class="token operator">:</span> <span class="token string">"my-queue"</span><span class="token punctuation">,</span>
+  userId<span class="token operator">:</span> <span class="token string">"wRsJZtadYvn4mBZmm"</span><span class="token punctuation">,</span>
+  createdAt<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">"2015-12-12T07:34:14.202Z"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  modifiedAt<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">"2015-12-13T08:36:13.202Z"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  accessedAt<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">"2015-12-14T08:36:13.202Z"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  totalRequestCount<span class="token operator">:</span> <span class="token number">25</span><span class="token punctuation">,</span>
+  handledRequestCount<span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+  pendingRequestCount<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>Returns</strong>:</p>
+<p><a href="../typedefs/request-queue-info"><code>Promise&lt;RequestQueueInfo&gt;</code></a></p>
+<hr>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/2.2.0/api/request-list"><span class="arrow-prev">← </span><span class="function-name-prevnext">RequestList</span></a><a class="docs-next button" href="/docs/2.2.0/api/pseudo-url"><span class="function-name-prevnext">PseudoUrl</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#requestqueueaddrequestrequestlike-options"><code>requestQueue.addRequest(requestLike, [options])</code></a></li><li><a href="#requestqueuegetrequestid"><code>requestQueue.getRequest(id)</code></a></li><li><a href="#requestqueuefetchnextrequest"><code>requestQueue.fetchNextRequest()</code></a></li><li><a href="#requestqueuemarkrequesthandledrequest"><code>requestQueue.markRequestHandled(request)</code></a></li><li><a href="#requestqueuereclaimrequestrequest-options"><code>requestQueue.reclaimRequest(request, [options])</code></a></li><li><a href="#requestqueueisempty"><code>requestQueue.isEmpty()</code></a></li><li><a href="#requestqueueisfinished"><code>requestQueue.isFinished()</code></a></li><li><a href="#requestqueuedrop"><code>requestQueue.drop()</code></a></li><li><a href="#requestqueuehandledcount"><code>requestQueue.handledCount()</code></a></li><li><a href="#requestqueuegetinfo"><code>requestQueue.getInfo()</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/apify_logo.svg" alt="Apify SDK" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/guides/motivation">Guide</a><a href="/docs/examples/crawl-multiple-urls">Examples</a><a href="/docs/api/apify">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/apify" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/apify" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://www.facebook.com/apifytech" target="_blank" rel="noreferrer noopener">Facebook</a></div><div><h5>More</h5><a href="https://apify.com" target="_blank">Apify Cloud</a><a href="https://docusaurus.io" target="_blank">Docusaurus</a><a href="https://github.com/apify/apify-js" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2022 Apify Technologies s.r.o.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '64ce2544769e34add0e6402688c86e92',
+                indexName: 'apify_sdk',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["version:2.2.0"]}
+              });
+            </script></body></html>
